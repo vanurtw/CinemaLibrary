@@ -36,8 +36,8 @@ class DirectorsActors(models.Model):
 
 # Жанраы
 class Genre(models.Model):
-    title = models.CharField(verbose_name='Жанр')
-    slug = models.SlugField(verbose_name='Слаг')
+    title = models.CharField(verbose_name='Жанр', max_length=255)
+    slug = models.SlugField(verbose_name='Слаг', max_length=255)
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
@@ -54,8 +54,8 @@ class Movie(models.Model):
     poster = models.ImageField(upload_to='poster/', verbose_name='Постер')
     data_movie = models.DateTimeField(verbose_name='Дата выхода фильма')
     country = models.CharField(max_length=255, verbose_name='Страна')
-    director = models.ManyToManyField(DirectorsActors, verbose_name='Режисер')
-    actors = models.ManyToManyField(DirectorsActors, verbose_name='Актеры')
+    director = models.ManyToManyField(DirectorsActors, verbose_name='Режисер', related_name='director_movies')
+    actors = models.ManyToManyField(DirectorsActors, verbose_name='Актеры', related_name='actor_movies')
     genre = models.ManyToManyField(Genre, verbose_name='Жанр')
     premiere = models.CharField(
         max_length=255,
@@ -95,7 +95,7 @@ class RatingStars(models.Model):
 
 # Рейтинг
 class Rating(models.Model):
-    rating = models.ForeignKey(RatingStars, on_delete=models.CASCADE)
+    rating = models.ForeignKey(RatingStars, on_delete=models.CASCADE, related_name='ratings')
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
     class Meta:

@@ -49,7 +49,7 @@ class Genre(models.Model):
 class Movie(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название')
     slug = models.SlugField(verbose_name='')
-    tagline = models.CharField(max_length=255, verbose_name='Слоган')
+    tagline = models.CharField(max_length=255, verbose_name='Слоган', blank=True)
     content = models.TextField(verbose_name='Описание')
     poster = models.ImageField(upload_to='poster/', verbose_name='Постер')
     data_movie = models.DateTimeField(verbose_name='Дата выхода фильма')
@@ -63,7 +63,7 @@ class Movie(models.Model):
     )
     budget = models.CharField(max_length=255, verbose_name='Бюджет')
 
-    fees_world = models.CharField(max_length=255, verbose_name='Cборы в мире')
+    fees_world = models.CharField(max_length=255, verbose_name='Cборы в мире(млн)')
     category = models.ForeignKey(Categories, on_delete=models.CASCADE, verbose_name='Категория')
     active = models.BooleanField(default=True, verbose_name='Активный')
 

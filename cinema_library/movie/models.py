@@ -24,7 +24,7 @@ class DirectorsActors(models.Model):
     name = models.CharField(max_length=200, verbose_name='Имя')
     description = models.TextField(verbose_name='Описание')
     age = models.PositiveIntegerField(verbose_name='Возраст')
-    image = models.ImageField(upload_to='directors_actors', verbose_name='Изображение')
+    image = models.ImageField(upload_to='directors_actors', verbose_name='Изображение', blank=True)
 
     def __str__(self):
         return self.name
@@ -44,14 +44,17 @@ class Genre(models.Model):
         verbose_name = 'Жанр'
         verbose_name_plural = 'Жанры'
 
+    def __str__(self):
+        return self.title
+
 
 # Фильмы
 class Movie(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название')
-    slug = models.SlugField(verbose_name='')
+    slug = models.SlugField()
     tagline = models.CharField(max_length=255, verbose_name='Слоган', blank=True)
     content = models.TextField(verbose_name='Описание')
-    poster = models.ImageField(upload_to='poster/', verbose_name='Постер')
+    poster = models.ImageField(upload_to='poster/', verbose_name='Постер', blank=True)
     data_movie = models.DateTimeField(verbose_name='Дата выхода фильма')
     country = models.CharField(max_length=255, verbose_name='Страна')
     director = models.ManyToManyField(DirectorsActors, verbose_name='Режисер', related_name='director_movies')
@@ -70,6 +73,9 @@ class Movie(models.Model):
     class Meta:
         verbose_name = 'Фильм'
         verbose_name_plural = 'Фильмы'
+
+    def __str__(self):
+        return self.title
 
 
 # Кадры из фильмов

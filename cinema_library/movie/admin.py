@@ -7,7 +7,7 @@ from .models import *
 
 @admin.register(Categories)
 class CategoriesAdmin(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {'slug': ('name', )}
 
 
 @admin.register(DirectorsActors)
@@ -17,12 +17,12 @@ class DirectorsActorsAdmin(admin.ModelAdmin):
 
 @admin.register(Genre)
 class GenreAdmin(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {'slug':('title',)}
 
 
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {'slug':('title',)}
 
 
 @admin.register(StillsFilm)

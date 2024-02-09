@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView,  DetailView
+from django.views.generic import ListView, DetailView
 from .models import Movie
 
 
@@ -16,6 +16,4 @@ class MovieDetailView(DetailView):
     template_name = 'movie/moviesingle.html'
     model = Movie
     slug_url_kwarg = 'slug'
-
-
-
+    context_object_name = 'movie'

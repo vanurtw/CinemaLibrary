@@ -66,7 +66,7 @@ class Movie(models.Model):
     )
     budget = models.CharField(max_length=255, verbose_name='Бюджет')
 
-    fees_world = models.CharField(max_length=255, verbose_name='Cборы в мире(млн)')
+    fees_world = models.CharField(max_length=255, verbose_name='Cборы в мире')
     category = models.ForeignKey(Categories, on_delete=models.CASCADE, verbose_name='Категория')
     active = models.BooleanField(default=True, verbose_name='Активный')
     date_create = models.DateTimeField( auto_now_add=True)

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="page" class="page"><!-- mian-content -->
+    <div class="main-banner bg bg1" id="home"
+         style="background-color: rgba(0, 0, 0, 0); margin-top: 0px; background-image: url('{% static 'images/банер2.jpg' %}');">
+        {% include 'header.html' %}
+        <div class="banner-info">
+            <p class="editContent">лучший сайт на django 3</p>
+            <h3 class="mb-4 editContent">Все о кино</h3>
+            <div class="ban-buttons">
+            </div>
+        </div>
+    </div>
+    <ol class="breadcrumb editContent">
+        <li class="breadcrumb-item">
+            <a href="index.html" class="editContent">Home</a>
+        </li>
+        <li class="breadcrumb-item active editContent">Single Page</li>
+    </ol>
+    <section class="ab-info-main py-md-5 py-4 editContent" style="padding-left: 3rem; padding-right: 3rem;">
+        <div class="container-fluid py-md-3">
+            <div class="row">
+                {% include 'side-panel.html' %}
+                <div class="left-ads-display col-lg-9">
+                    <div class="row">
+                        {% for item in movies %}
+                        <div class="col-md-4 product-men">
+                            <div class="product-shoe-info editContent text-center mt-lg-4">
+                                <div class="men-thumb-item">
+                                    <img src="{{ item.poster.url }}" class="img-fluid" alt=""
+                                         style="height: 400px; width: 400px;">
+                                </div>
+                                <div class="item-info-product">
+                                    <h4 class="">
+                                        <a href="{% url 'movie_detail' item.slug %}"
+                                           class="editContent">{{item.title}}</a>
+                                    </h4>
+                                    <div class="product_price">
+                                        <div class="grid-price">
+                                            <span class="money editContent">«{{item.tagline}}»</span>
+                                        </div>
+                                    </div>
+                                    <ul class="stars">
+                                        <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a>
+                                        </li>
+                                        <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a>
+                                        </li>
+                                        <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+                    <!--<div class="grid-img-right mt-4 text-right bg bg1" >
+                        <span class="money editContent" >Flat 50% Off</span>
+                        <a href="moviesingle.html" class="btn" >Now</a>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'footer.html' %}
+
+    <!-- //footer -->
+    <div class="cpy-right py-3">
+        <div class="container">
+            <div class="row">
+                <p class="col-md-10 text-left">© 2019 DjangoMovie. All rights reserved | Design by
+                    <a href="https://djangochannel.com"> DJANGO SCHOOL.</a>
+                </p>
+                <!-- move top icon -->
+                <a href="#home" class="move-top text-right col-md-2"><span class="fa fa-long-arrow-up"
+                                                                           aria-hidden="true"></span></a>
+                <!-- //move top icon -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

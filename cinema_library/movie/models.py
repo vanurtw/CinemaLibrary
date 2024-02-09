@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.db import models
-
+from datetime import datetime
 
 # Create your models here.
 
@@ -69,6 +69,7 @@ class Movie(models.Model):
     fees_world = models.CharField(max_length=255, verbose_name='Cборы в мире(млн)')
     category = models.ForeignKey(Categories, on_delete=models.CASCADE, verbose_name='Категория')
     active = models.BooleanField(default=True, verbose_name='Активный')
+    date_create = models.DateTimeField( auto_now_add=True)
 
     class Meta:
         verbose_name = 'Фильм'

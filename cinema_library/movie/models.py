@@ -65,7 +65,7 @@ class Movie(models.Model):
         verbose_name='Премьера в мире',
     )
     budget = models.CharField(max_length=255, verbose_name='Бюджет')
-
+    url = models.URLField(blank=True, verbose_name='Ссылка на трейлер фильма')
     fees_world = models.CharField(max_length=255, verbose_name='Cборы в мире')
     category = models.ForeignKey(Categories, on_delete=models.CASCADE, verbose_name='Категория')
     active = models.BooleanField(default=True, verbose_name='Активный')
@@ -84,7 +84,7 @@ class StillsFilm(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название')
     description = models.TextField(verbose_name='Описание')
     image = models.ImageField(upload_to='stills_film', verbose_name='зображения из фильма')
-    film = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name='Фильм')
+    film = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name='Фильм', related_name='stills_films')
 
     class Meta:
         verbose_name = 'Кадр из фильма'

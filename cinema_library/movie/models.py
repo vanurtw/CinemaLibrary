@@ -1,6 +1,8 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 from datetime import datetime
+from django.shortcuts import reverse
+
 
 # Create your models here.
 
@@ -65,11 +67,11 @@ class Movie(models.Model):
         verbose_name='Премьера в мире',
     )
     budget = models.CharField(max_length=255, verbose_name='Бюджет')
-    url = models.URLField(blank=True, verbose_name='Ссылка на трейлер фильма')
+    url = models.URLField(verbose_name='Ссылка на трейлер фильма')
     fees_world = models.CharField(max_length=255, verbose_name='Cборы в мире')
     category = models.ForeignKey(Categories, on_delete=models.CASCADE, verbose_name='Категория')
     active = models.BooleanField(default=True, verbose_name='Активный')
-    date_create = models.DateTimeField( auto_now_add=True)
+    date_create = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = 'Фильм'
@@ -77,6 +79,9 @@ class Movie(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('movie_detail', kwargs={'slug': self.slug})
 
 
 # Кадры из фильмов
@@ -90,6 +95,9 @@ class StillsFilm(models.Model):
         verbose_name = 'Кадр из фильма'
         verbose_name_plural = 'Кадры из фильмов'
 
+    def __str__(self):
+        return self.film.title
+
 
 # Звезды рейтинга
 class RatingStars(models.Model):
@@ -98,6 +106,9 @@ class RatingStars(models.Model):
     class Meta:
         verbose_name = 'Значения рейтинга'
         verbose_name_plural = 'Значение рейтинга'
+
+    def __str__(self):
+        return str(self.rating)
 
 
 # Рейтинг
@@ -116,9 +127,12 @@ class Reviews(models.Model):
     name = models.CharField(max_length=255, verbose_name='Имя')
     email = models.EmailField(verbose_name='Почта')
     text = models.TextField(verbose_name='Комментарий')
-    parent = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='Родитель')
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name='Фильм')
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='Родитель', blank=True, null=True)
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name='Фильм', related_name='reviews')
 
     class Meta:
-        verbose_name = 'Отзывы'
-        verbose_name_plural = 'Отзыв'
+        verbose_name = 'Отзыв'
+        verbose_name_plural = 'Отзывы'
+
+    def __str__(self):
+        return f'{self.name}_{self.movie.title}'

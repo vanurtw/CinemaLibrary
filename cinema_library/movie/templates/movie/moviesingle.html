@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div id="page" class="page">
-    <div class="main-banner inner bg bg1" id="home">
+    <div class="main-banner inner bg bg1" style="background-color: rgba(0, 0, 0, 0); margin-top: 0px; background-image: url('{% static 'images/банер3.jpg' %}');" id="home">
         {% include 'header.html' %}
     </div>
     <ol class="breadcrumb editContent">
         <li class="breadcrumb-item">
-            <a href="index.html" class="editContent"
+            <a href="{% url 'home' %}" class="editContent"
                style="outline: none; cursor: inherit;">Home</a>
         </li>
         <li class="breadcrumb-item active editContent" style="outline: none; cursor: inherit;">

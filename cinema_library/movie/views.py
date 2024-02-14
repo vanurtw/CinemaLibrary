@@ -12,6 +12,11 @@ class MovieListView(ListView):
     model = Movie
     context_object_name = 'movies'
 
+    def post(self, request, **kwargs):
+        search_post = request.POST.get('search')
+        movies = Movie.objects.filter(title__icontains=search_post)
+        return render(request, 'movie/movies.html', {'movies': movies})
+
 
 class MovieDetailView(DetailView):
     template_name = 'movie/moviesingle.html'

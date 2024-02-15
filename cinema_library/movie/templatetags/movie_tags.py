@@ -1,5 +1,5 @@
 from django.template import Library
-from movie.models import Genre, Movie
+from movie.models import Genre, Movie, Categories
 
 register = Library()
 
@@ -8,6 +8,12 @@ register = Library()
 def genry_tags():
     genres = Genre.objects.all()
     return genres
+
+
+@register.simple_tag(name='genre_movie')
+def genry_movie():
+    categories = Categories.objects.all()
+    return categories
 
 
 @register.inclusion_tag(filename='tags/year_paid_side.html', name='year_side')

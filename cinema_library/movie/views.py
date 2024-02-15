@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, View
-from .models import Movie, Reviews
+from .models import Movie, Reviews, Categories
 from .forms import ReviewsForm
 
 
@@ -9,8 +9,13 @@ from .forms import ReviewsForm
 
 class MovieListView(ListView):
     template_name = 'movie/movies.html'
-    model = Movie
     context_object_name = 'movies'
+
+    def get_queryset(self, *args, **kwargs):
+        category = self.request.GET.get('category', None)
+        if category:
+            return Movie.objects.filter(category__slug=category)
+        return Movie.objects.all()
 
     def post(self, request, **kwargs):
         search_post = request.POST.get('search')

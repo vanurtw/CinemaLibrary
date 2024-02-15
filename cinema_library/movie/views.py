@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, View
-from .models import Movie
+from .models import Movie, Reviews
 from .forms import ReviewsForm
 
 
@@ -37,7 +37,17 @@ class ReviewHandle(View):
         movie = get_object_or_404(Movie, id=movie_id)
         form = ReviewsForm(request.POST)
         if form.is_valid():
+            parent_id = request.POST.get('parent_id', None)
             form = form.save(commit=False)
             form.movie = movie
+            if parent_id:
+                parent_comment = Reviews.objects.get(id=parent_id)
+                form.parent = parent_comment
             form.save()
         return redirect(movie.get_absolute_url())
+
+    def get(self, request, **kwargs):
+        movie_id = kwargs.get('pk')
+        movie = get_object_or_404(Movie, id=movie_id)
+        parent_id_comment = request.GET.get('parent')
+        return render(request, 'movie/moviesingle.html', {'parent_comment': parent_id_comment, 'movie':movie})

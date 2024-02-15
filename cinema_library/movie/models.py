@@ -2,9 +2,14 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from datetime import datetime
 from django.shortcuts import reverse
+from django.db.models import Q
 
 
 # Create your models here.
+class NotParentManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(~Q(parent=None))
+
 
 # Категории
 class Categories(models.Model):
@@ -72,6 +77,8 @@ class Movie(models.Model):
     category = models.ForeignKey(Categories, on_delete=models.CASCADE, verbose_name='Категория')
     active = models.BooleanField(default=True, verbose_name='Активный')
     date_create = models.DateTimeField(auto_now_add=True)
+    objects = models.Manager()
+    not_parents = NotParentManager()
 
     class Meta:
         verbose_name = 'Фильм'
@@ -127,7 +134,8 @@ class Reviews(models.Model):
     name = models.CharField(max_length=255, verbose_name='Имя')
     email = models.EmailField(verbose_name='Почта')
     text = models.TextField(verbose_name='Комментарий')
-    parent = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='Родитель', blank=True, null=True)
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='Родитель', blank=True, null=True,
+                               related_name='parents')
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name='Фильм', related_name='reviews')
 
     class Meta:

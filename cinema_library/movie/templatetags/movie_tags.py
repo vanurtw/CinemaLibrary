@@ -16,6 +16,14 @@ def genry_movie():
     return categories
 
 
+# @register.simple_tag(name='range_star')
+# def range_star(count=5):
+#     return range(count)
+@register.filter(name='range_star')
+def range_star(count=5):
+    return range(int(count))
+
+
 @register.inclusion_tag(filename='tags/year_paid_side.html', name='year_side')
 def year_side_paid():
     movie = Movie.objects.values_list('premiere').distinct().order_by('premiere')

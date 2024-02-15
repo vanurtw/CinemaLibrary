@@ -55,6 +55,18 @@ class Genre(models.Model):
         return self.title
 
 
+# Звезды рейтинга
+class RatingStars(models.Model):
+    rating = models.CharField(max_length=10, verbose_name='Рейтинг')
+
+    class Meta:
+        verbose_name = 'Значения рейтинга'
+        verbose_name_plural = 'Значение рейтинга'
+
+    def __str__(self):
+        return str(self.rating)
+
+
 # Фильмы
 class Movie(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название')
@@ -73,6 +85,7 @@ class Movie(models.Model):
     )
     budget = models.CharField(max_length=255, verbose_name='Бюджет')
     url = models.URLField(verbose_name='Ссылка на трейлер фильма')
+    rating = models.ForeignKey(RatingStars, on_delete=models.CASCADE, verbose_name='Рейтинг', related_name='movies', default=5)
     fees_world = models.CharField(max_length=255, verbose_name='Cборы в мире')
     category = models.ForeignKey(Categories, on_delete=models.CASCADE, verbose_name='Категория')
     active = models.BooleanField(default=True, verbose_name='Активный')
@@ -104,28 +117,6 @@ class StillsFilm(models.Model):
 
     def __str__(self):
         return self.film.title
-
-
-# Звезды рейтинга
-class RatingStars(models.Model):
-    rating = models.PositiveIntegerField(verbose_name='Значение рейтинга')
-
-    class Meta:
-        verbose_name = 'Значения рейтинга'
-        verbose_name_plural = 'Значение рейтинга'
-
-    def __str__(self):
-        return str(self.rating)
-
-
-# Рейтинг
-class Rating(models.Model):
-    rating = models.ForeignKey(RatingStars, on_delete=models.CASCADE, related_name='ratings')
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
-
-    class Meta:
-        verbose_name = 'Рейтинг'
-        verbose_name_plural = 'Рейтинг'
 
 
 # Отзывы

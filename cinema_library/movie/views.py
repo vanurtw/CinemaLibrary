@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, View
-from .models import Movie, Reviews, Categories
+from .models import Movie, Reviews, Categories, RatingStars
 from .forms import ReviewsForm
 
 
@@ -21,6 +21,12 @@ class MovieListView(ListView):
         search_post = request.POST.get('search')
         movies = Movie.objects.filter(title__icontains=search_post)
         return render(request, 'movie/movies.html', {'movies': movies})
+
+    def get_context_data(self, *args, object_list=None, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        ratings_star = RatingStars.objects.all()
+        context['ratings_star'] = ratings_star
+        return context
 
 
 class MovieDetailView(DetailView):
@@ -55,4 +61,4 @@ class ReviewHandle(View):
         movie_id = kwargs.get('pk')
         movie = get_object_or_404(Movie, id=movie_id)
         parent_id_comment = request.GET.get('parent')
-        return render(request, 'movie/moviesingle.html', {'parent_comment': parent_id_comment, 'movie':movie})
+        return render(request, 'movie/moviesingle.html', {'parent_comment': parent_id_comment, 'movie': movie})

@@ -35,9 +35,6 @@ class RatingStarsAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Rating)
-class RatingAdmin(admin.ModelAdmin):
-    pass
 
 
 @admin.register(Reviews)

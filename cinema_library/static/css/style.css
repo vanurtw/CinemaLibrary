@@ -425,7 +425,12 @@ li > a:only-child:after {
     /* Firefox 18- */
     color: #ccc;
 }
-
+.star:hover{
+    color:#ff4c4c;
+}
+.editContent:hover{
+    color:blue;
+}
 .banner-info {
     padding: 16em 0 0em 3em;
     width: 32%;

@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'movie',
-    'dj_ajax',
     'debug_toolbar'
 ]
 

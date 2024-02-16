@@ -65,7 +65,4 @@ class ReviewHandle(View):
         return render(request, 'movie/moviesingle.html', {'parent_comment': parent_id_comment, 'movie': movie})
 
 
-def movie_year(request):
-    year = request.GET.get('year', None)
-    response = {'year_movie': Movie.objects.filter(premiere=year)}
-    return JsonResponse(response)
+

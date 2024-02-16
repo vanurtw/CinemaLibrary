@@ -16,9 +16,9 @@
     </div>
     {% if messages %}
     {% for message in messages %}
-        <div class="{{message.tags}}">
-    <span>{{message}}</span>
-            </div>
+    <div class="{{message.tags}}">
+        <span>{{message}}</span>
+    </div>
     {% endfor %}
     {% endif %}
     <form action="{% url 'movie_filtering' %}" method="post">

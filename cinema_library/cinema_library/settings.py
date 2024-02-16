@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'movie',
+    'dj_ajax',
     'debug_toolbar'
 ]
 
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'cinema_library.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/'templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,7 +121,7 @@ INTERNAL_IPS = [
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_DIRS = BASE_DIR/'static'
+STATIC_DIRS = BASE_DIR / 'static'
 STATICFILES_DIRS = [STATIC_DIRS]
 
 # Default primary key field type

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, View
 from .models import Movie, Reviews, Categories, RatingStars
 from .forms import ReviewsForm
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -62,3 +63,9 @@ class ReviewHandle(View):
         movie = get_object_or_404(Movie, id=movie_id)
         parent_id_comment = request.GET.get('parent')
         return render(request, 'movie/moviesingle.html', {'parent_comment': parent_id_comment, 'movie': movie})
+
+
+def movie_year(request):
+    year = request.GET.get('year', None)
+    response = {'year_movie': Movie.objects.filter(premiere=year)}
+    return JsonResponse(response)

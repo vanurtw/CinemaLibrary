@@ -433,7 +433,10 @@ li > a:only-child:after {
     padding: 16em 0 0em 3em;
     width: 32%;
 }
-
+.error{
+    margin-top: 20px;
+    color: red;
+    }
 .banner-info h3 {
     font-size: 3.5em;
     letter-spacing: 2px;

@@ -3,8 +3,7 @@
     <ul class="w3layouts-box-list">
         {% for item in movie %}
         <li class="editContent">
-            <input type="checkbox" class="checked">
-            <span class="span editContent">{{ item.0 }}</span>
+            <input type="radio" class="checked" name="year" value="{{item.0}}">{{item.0}}
         </li>
         {% endfor %}
     </ul>

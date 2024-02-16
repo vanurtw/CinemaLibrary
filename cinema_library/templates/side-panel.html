@@ -14,6 +14,13 @@
             </button>
         </form>
     </div>
+    {% if messages %}
+    {% for message in messages %}
+        <div class="{{message.tags}}">
+    <span>{{message}}</span>
+            </div>
+    {% endfor %}
+    {% endif %}
     <form action="{% url 'movie_filtering' %}" method="post">
         {% csrf_token %}
         <div class="left-side my-4">

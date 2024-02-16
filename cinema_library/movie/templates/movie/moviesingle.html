@@ -20,7 +20,9 @@
              style="outline: none; outline-offset: -2px; cursor: inherit; color: rgb(33, 37, 41); font-size: 16px; background-color: rgba(0, 0, 0, 0); font-family: Lato, sans-serif;">
         <div class="container py-md-3">
             <div class="row">
-                {% include 'side-panel.html' %}
+                <div class="side-bar col-lg-4">
+                    {% include 'side-panel.html' %}
+                </div>
                 <div class="left-ads-display col-lg-8">
                     <div class="row">
                         <div class="desc1-left col-md-6">
@@ -99,12 +101,13 @@
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
+                            </ul>
                         </div>
                     </div>
                     <div class="row sub-para-w3layouts mt-5">
 
                         <h3 class="shop-sing editContent" style="outline: none; cursor: inherit;">
-                            О фильме Терминатор: Темные судьбы</h3>
+                            О фильме {{movie}}</h3>
                         <p>{% for i in movie.stills_films.all %}
                             <img src="{{i.image.url}}" style="width:240px; height:160px" alt="">
                             {% endfor %}

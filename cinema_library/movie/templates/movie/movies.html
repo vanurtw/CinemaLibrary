@@ -23,7 +23,9 @@
     <section class="ab-info-main py-md-5 py-4 editContent" style="padding-left: 3rem; padding-right: 3rem;">
         <div class="container-fluid py-md-3">
             <div class="row">
-                {% include 'side-panel.html' %}
+                <div class="side-bar col-lg-3">
+                    {% include 'side-panel.html' %}
+                </div>
                 <div class="left-ads-display col-lg-9">
                     <div class="row">
                         {% for item in movies %}
@@ -31,8 +33,8 @@
                             <div class="product-shoe-info editContent text-center mt-lg-4">
                                 <div class="men-thumb-item">
                                     <a href="{% url 'movie_detail' item.slug %}">
-                                    <img src="{{ item.poster.url }}" class="img-fluid" alt=""
-                                         style="height: 400px; width: 400px;"></a>
+                                        <img src="{{ item.poster.url }}" class="img-fluid" alt=""
+                                             style="height: 400px; width: 400px;"></a>
                                 </div>
                                 <div class="item-info-product">
                                     <h4 class="">

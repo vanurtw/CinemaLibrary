@@ -428,7 +428,14 @@ li > a:only-child:after {
 .star:hover{
     color:#ff4c4c;
 }
-
+.button-form{
+    border: none;
+    background-color: #1e272e;
+    color: #ff4c4c;
+    padding: 10px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    }
 .banner-info {
     padding: 16em 0 0em 3em;
     width: 32%;

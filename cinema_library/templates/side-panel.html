@@ -1,61 +1,60 @@
 {% load movie_tags %}
-<div class="side-bar col-lg-3">
-    <div class="search-bar w3layouts-newsletter">
-        <h3 class="sear-head editContent">Поиск фильма</h3>
-        <form action="{% url 'home' %}" method="post" class="d-flex editContent">
-            {% csrf_token %}
-            <input type="search" placeholder="Введите название..." name="search" class="form-control"
-                   required="">
-            <button class="btn1 btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
-                     viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                </svg>
-            </button>
-        </form>
-    </div>
-    {% if messages %}
-    {% for message in messages %}
-    <div class="{{message.tags}}">
-        <span>{{message}}</span>
-    </div>
-    {% endfor %}
-    {% endif %}
-    <form action="{% url 'movie_filtering' %}" method="post">
+<div class="search-bar w3layouts-newsletter">
+    <h3 class="sear-head editContent">Поиск фильма</h3>
+    <form action="{% url 'home' %}" method="post" class="d-flex editContent">
         {% csrf_token %}
-        <div class="left-side my-4">
-            <h3 class="sear-head editContent">Жанры</h3>
-            {% genry_tags as genre %}
-            <ul class="w3layouts-box-list">
-
-                {% for item in genre %}
-                <li class="editContent">
-                    <input type="radio" class="checked" name="genre" value="{{item}}">{{item}}
-                    <!--                    <span class="span editContent">{{item}}</span>-->
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% year_side %}
-        <button type="submit">Применить фильтр</button>
+        <input type="search" placeholder="Введите название..." name="search" class="form-control"
+               required="">
+        <button class="btn1 btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                 viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+        </button>
     </form>
-    <div class="customer-rev left-side my-4">
-        <h3 class="sear-head editContent">Рейтинг</h3>
+</div>
+{% if messages %}
+{% for message in messages %}
+<div class="{{message.tags}}">
+    <span>{{message}}</span>
+</div>
+{% endfor %}
+{% endif %}
+<form action="{% url 'movie_filtering' %}" method="post">
+    {% csrf_token %}
+    <div class="left-side my-4">
+        <h3 class="sear-head editContent">Жанры</h3>
+        {% genry_tags as genre %}
         <ul class="w3layouts-box-list">
-            {% for i in ratings_star%}
-            <li>
-                <a href="#" class="star">
-                    {% for i in i.rating|range_star %}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         class="bi bi-star-fill" viewBox="0 0 16 16">
-                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    {% endfor %}
-                    <span class="editContent">5.0</span>
-                </a>
+
+            {% for item in genre %}
+            <li class="editContent">
+                <input type="radio" class="checked" name="genre" value="{{item}}"> {{item}}
+                <!--                    <span class="span editContent">{{item}}</span>-->
             </li>
             {% endfor %}
         </ul>
     </div>
-    {% last_append %}
+    {% year_side %}
+    <button type="submit" class="button-form">Применить фильтр</button>
+    <a href="{% url 'home' %}">Сбросить фильтры</a>
+</form>
+<div class="customer-rev left-side my-4">
+    <h3 class="sear-head editContent">Рейтинг</h3>
+    <ul class="w3layouts-box-list">
+        {% for i in ratings_star%}
+        <li>
+            <a href="#" class="star">
+                {% for i in i.rating|range_star %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                {% endfor %}
+                <span class="editContent">5.0</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
+{% last_append %}

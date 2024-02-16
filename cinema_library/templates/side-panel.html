@@ -6,7 +6,6 @@
             {% csrf_token %}
             <input type="search" placeholder="Введите название..." name="search" class="form-control"
                    required="">
-
             <button class="btn1 btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
                      viewBox="0 0 16 16">
@@ -15,21 +14,22 @@
             </button>
         </form>
     </div>
-    <!--preference -->
-    <div class="left-side my-4">
-        <h3 class="sear-head editContent">Жанры</h3>
-        {% genry_tags as genre %}
-        <ul class="w3layouts-box-list">
-            {% for item in genre %}
-            <li class="editContent">
-                <input type="checkbox" class="checked">
-                <span class="span editContent">{{item}}</span>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% year_side %}
-    <!-- reviews -->
+    <form action="{% url 'movie_filtering' %}">
+        {% csrf_token %}
+        <div class="left-side my-4">
+            <h3 class="sear-head editContent">Жанры</h3>
+            {% genry_tags as genre %}
+            <ul class="w3layouts-box-list">
+                {% for item in genre %}
+                <li class="editContent">
+                    <input type="checkbox" class="checked">
+                    <span class="span editContent">{{item}}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% year_side %}
+    </form>
     <div class="customer-rev left-side my-4">
         <h3 class="sear-head editContent">Рейтинг</h3>
         <ul class="w3layouts-box-list">
@@ -48,8 +48,5 @@
             {% endfor %}
         </ul>
     </div>
-    <!-- //reviews -->
-    <!-- deals -->
     {% last_append %}
-    <!-- //deals -->
 </div>

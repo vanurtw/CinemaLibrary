@@ -1,0 +1,2238 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-02-05T07:46:19.658Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Арнольд Шварценеггер",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2024-02-05T07:49:10.775Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Genre object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2024-02-05T07:49:27.548Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "awd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2024-02-05T07:49:42.457Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Movie object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2024-02-07T09:09:36.956Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Genre object (1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0416\\u0430\\u043d\\u0440\", \"\\u0421\\u043b\\u0430\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2024-02-07T09:13:48.823Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Genre object (1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0416\\u0430\\u043d\\u0440\", \"\\u0421\\u043b\\u0430\\u0433\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2024-02-07T09:17:00.518Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043b\\u043e\\u0433\\u0430\\u043d\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2024-02-07T09:18:30.966Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2024-02-07T09:20:50.477Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u0414\\u0430\\u0442\\u0430 \\u0432\\u044b\\u0445\\u043e\\u0434\\u0430 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\", \"\\u0421\\u0442\\u0440\\u0430\\u043d\\u0430\", \"\\u041f\\u0440\\u0435\\u043c\\u044c\\u0435\\u0440\\u0430 \\u0432 \\u043c\\u0438\\u0440\\u0435\", \"\\u0411\\u044e\\u0434\\u0436\\u0435\\u0442\", \"C\\u0431\\u043e\\u0440\\u044b \\u0432 \\u043c\\u0438\\u0440\\u0435(\\u043c\\u043b\\u043d)\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2024-02-07T09:22:20.760Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Фильмы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\", \"\\u0421\\u043b\\u0430\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2024-02-07T09:22:43.235Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Фильмы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2024-02-07T09:22:51.608Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Фильмы",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2024-02-07T09:23:53.965Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "Сериалы",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2024-02-07T09:26:31.108Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "3",
+        "object_repr": "Мультфильмы",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2024-02-07T09:26:44.874Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2024-02-07T09:28:00.044Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043b\\u043e\\u0433\\u0430\\u043d\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2024-02-07T09:39:16.437Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "2",
+        "object_repr": "Зеленая миля",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2024-02-08T07:15:57.989Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "2",
+        "object_repr": "Зеленая миля",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0441\\u0442\\u0435\\u0440\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2024-02-08T07:17:34.027Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0441\\u0442\\u0435\\u0440\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2024-02-08T07:21:02.390Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "2",
+        "object_repr": "Зеленая миля",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043b\\u043e\\u0433\\u0430\\u043d\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2024-02-08T07:21:56.212Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "драма",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2024-02-08T07:24:06.828Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Фрэнк Дарабонт",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2024-02-08T07:26:26.085Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Том Хэнкс",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2024-02-08T07:26:40.557Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "2",
+        "object_repr": "Зеленая миля",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0420\\u0435\\u0436\\u0438\\u0441\\u0435\\u0440\", \"\\u0410\\u043a\\u0442\\u0435\\u0440\\u044b\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2024-02-08T08:00:12.557Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "3",
+        "object_repr": "Спасти рядового Райана",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2024-02-08T08:02:07.793Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Стивен Аллан Спилберг",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2024-02-08T08:03:00.982Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "3",
+        "object_repr": "Спасти рядового Райана",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0432\\u044b\\u0445\\u043e\\u0434\\u0430 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\", \"\\u0420\\u0435\\u0436\\u0438\\u0441\\u0435\\u0440\", \"\\u041f\\u0440\\u0435\\u043c\\u044c\\u0435\\u0440\\u0430 \\u0432 \\u043c\\u0438\\u0440\\u0435\", \"\\u0411\\u044e\\u0434\\u0436\\u0435\\u0442\", \"C\\u0431\\u043e\\u0440\\u044b \\u0432 \\u043c\\u0438\\u0440\\u0435(\\u043c\\u043b\\u043d)\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2024-02-08T08:07:09.578Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "Терминатор 2: Судный день",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2024-02-08T08:12:34.418Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "5",
+        "object_repr": "Форрест Гамп",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2024-02-08T08:16:14.050Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "6",
+        "object_repr": "В погоне за счастьем",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2024-02-08T08:18:04.737Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "6",
+        "object_repr": "В погоне за счастьем",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0441\\u0442\\u0435\\u0440\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2024-02-08T10:03:24.098Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "5",
+        "object_repr": "Форрест Гамп",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0441\\u0442\\u0435\\u0440\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2024-02-08T10:10:32.602Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "6",
+        "object_repr": "В погоне за счастьем",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0435\\u043c\\u044c\\u0435\\u0440\\u0430 \\u0432 \\u043c\\u0438\\u0440\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2024-02-09T10:03:52.690Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2024-02-09T10:03:57.076Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "2",
+        "object_repr": "Зеленая миля",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2024-02-09T10:05:21.099Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2024-02-09T10:05:28.520Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "6",
+        "object_repr": "В погоне за счастьем",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2024-02-09T10:05:37.995Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "6",
+        "object_repr": "В погоне за счастьем",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2024-02-09T10:05:41.890Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "5",
+        "object_repr": "Форрест Гамп",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2024-02-09T10:05:46.470Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "Терминатор 2: Судный день",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2024-02-09T10:05:50.694Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "3",
+        "object_repr": "Спасти рядового Райана",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2024-02-09T11:10:02.835Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Маккензи Дэвис",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2024-02-09T11:10:55.502Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Эдвард Ферлонг",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2024-02-09T11:11:07.822Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "7",
+        "object_repr": "Линда Хэмилтон",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2024-02-09T11:11:21.692Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "Кассандра Старр",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2024-02-09T11:14:07.039Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "9",
+        "object_repr": "Гэбриел Луна",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2024-02-09T11:14:21.997Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "Стивен Кри",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2024-02-09T11:14:45.930Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "фантастика",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2024-02-09T11:14:53.048Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u043a\\u0442\\u0435\\u0440\\u044b\", \"\\u0416\\u0430\\u043d\\u0440\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2024-02-09T11:57:58.894Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0411\\u044e\\u0434\\u0436\\u0435\\u0442\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2024-02-13T09:24:46.149Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "StillsFilm object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2024-02-13T09:25:11.535Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "StillsFilm object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2024-02-13T09:25:25.091Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "StillsFilm object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2024-02-13T09:31:31.259Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "StillsFilm object (1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f \\u0438\\u0437 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2024-02-13T09:41:57.764Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "6",
+        "object_repr": "В погоне за счастьем",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2024-02-13T09:44:10.895Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430 \\u043d\\u0430 \\u0442\\u0440\\u0435\\u0439\\u043b\\u0435\\u0440 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2024-02-13T09:48:09.718Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Терминатор",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430 \\u043d\\u0430 \\u0442\\u0440\\u0435\\u0439\\u043b\\u0435\\u0440 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2024-02-13T09:49:39.846Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "6",
+        "object_repr": "В погоне за счастьем",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430 \\u043d\\u0430 \\u0442\\u0440\\u0435\\u0439\\u043b\\u0435\\u0440 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2024-02-13T09:52:37.412Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "StillsFilm object (4)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2024-02-13T09:52:52.277Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "StillsFilm object (5)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2024-02-13T09:53:03.237Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "6",
+        "object_repr": "StillsFilm object (6)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2024-02-13T09:55:40.649Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "7",
+        "object_repr": "StillsFilm object (7)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2024-02-13T09:55:52.889Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "8",
+        "object_repr": "StillsFilm object (8)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2024-02-13T09:56:03.532Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "StillsFilm object (9)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2024-02-13T10:28:18.145Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "10",
+        "object_repr": "StillsFilm object (10)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2024-02-13T10:28:32.240Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "StillsFilm object (11)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2024-02-13T10:28:45.305Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "12",
+        "object_repr": "StillsFilm object (12)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2024-02-13T10:31:52.812Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "13",
+        "object_repr": "StillsFilm object (13)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2024-02-13T10:32:04.360Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "14",
+        "object_repr": "StillsFilm object (14)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2024-02-13T10:32:13.619Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "15",
+        "object_repr": "StillsFilm object (15)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2024-02-13T10:34:47.966Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "16",
+        "object_repr": "StillsFilm object (16)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2024-02-13T10:35:03.132Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "17",
+        "object_repr": "StillsFilm object (17)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2024-02-13T10:35:20.339Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "18",
+        "object_repr": "StillsFilm object (18)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2024-02-13T10:36:17.314Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "2",
+        "object_repr": "Зеленая миля",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430 \\u043d\\u0430 \\u0442\\u0440\\u0435\\u0439\\u043b\\u0435\\u0440 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2024-02-13T10:37:45.058Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "2",
+        "object_repr": "Зеленая миля",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430 \\u043d\\u0430 \\u0442\\u0440\\u0435\\u0439\\u043b\\u0435\\u0440 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2024-02-13T10:39:08.308Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "3",
+        "object_repr": "Спасти рядового Райана",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430 \\u043d\\u0430 \\u0442\\u0440\\u0435\\u0439\\u043b\\u0435\\u0440 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2024-02-13T10:40:01.766Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "Терминатор 2: Судный день",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430 \\u043d\\u0430 \\u0442\\u0440\\u0435\\u0439\\u043b\\u0435\\u0440 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2024-02-13T10:40:43.997Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "5",
+        "object_repr": "Форрест Гамп",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430 \\u043d\\u0430 \\u0442\\u0440\\u0435\\u0439\\u043b\\u0435\\u0440 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2024-02-13T10:41:22.458Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "6",
+        "object_repr": "В погоне за счастьем",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430 \\u043d\\u0430 \\u0442\\u0440\\u0435\\u0439\\u043b\\u0435\\u0440 \\u0444\\u0438\\u043b\\u044c\\u043c\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2024-02-13T10:46:52.576Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "RatingStars object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2024-02-13T10:46:57.871Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "2",
+        "object_repr": "RatingStars object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2024-02-13T10:47:02.785Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "3",
+        "object_repr": "RatingStars object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2024-02-13T11:13:22.494Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Reviews object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2024-02-13T11:14:02.282Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Reviews object (2)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add Режиссер/Актер",
+        "content_type": 7,
+        "codename": "add_directorsactors"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change Режиссер/Актер",
+        "content_type": 7,
+        "codename": "change_directorsactors"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete Режиссер/Актер",
+        "content_type": 7,
+        "codename": "delete_directorsactors"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view Режиссер/Актер",
+        "content_type": 7,
+        "codename": "view_directorsactors"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add Отзывы",
+        "content_type": 8,
+        "codename": "add_reviews"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change Отзывы",
+        "content_type": 8,
+        "codename": "change_reviews"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete Отзывы",
+        "content_type": 8,
+        "codename": "delete_reviews"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view Отзывы",
+        "content_type": 8,
+        "codename": "view_reviews"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add Кадр из фильма",
+        "content_type": 9,
+        "codename": "add_stillsfilm"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change Кадр из фильма",
+        "content_type": 9,
+        "codename": "change_stillsfilm"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete Кадр из фильма",
+        "content_type": 9,
+        "codename": "delete_stillsfilm"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view Кадр из фильма",
+        "content_type": 9,
+        "codename": "view_stillsfilm"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add Жанр",
+        "content_type": 10,
+        "codename": "add_genre"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change Жанр",
+        "content_type": 10,
+        "codename": "change_genre"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete Жанр",
+        "content_type": 10,
+        "codename": "delete_genre"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view Жанр",
+        "content_type": 10,
+        "codename": "view_genre"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add Категория",
+        "content_type": 11,
+        "codename": "add_categories"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change Категория",
+        "content_type": 11,
+        "codename": "change_categories"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete Категория",
+        "content_type": 11,
+        "codename": "delete_categories"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view Категория",
+        "content_type": 11,
+        "codename": "view_categories"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add Фильм",
+        "content_type": 12,
+        "codename": "add_movie"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change Фильм",
+        "content_type": 12,
+        "codename": "change_movie"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete Фильм",
+        "content_type": 12,
+        "codename": "delete_movie"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view Фильм",
+        "content_type": 12,
+        "codename": "view_movie"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add Значения рейтинга",
+        "content_type": 13,
+        "codename": "add_ratingstars"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change Значения рейтинга",
+        "content_type": 13,
+        "codename": "change_ratingstars"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete Значения рейтинга",
+        "content_type": 13,
+        "codename": "delete_ratingstars"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view Значения рейтинга",
+        "content_type": 13,
+        "codename": "view_ratingstars"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add Рейтинг",
+        "content_type": 14,
+        "codename": "add_rating"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change Рейтинг",
+        "content_type": 14,
+        "codename": "change_rating"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete Рейтинг",
+        "content_type": 14,
+        "codename": "delete_rating"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view Рейтинг",
+        "content_type": 14,
+        "codename": "view_rating"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$7zgEM6DZtZzbVhLhn92COD$RA8tBAisN1WTV81AoczzMnRtA6dcnm+Uz8LajFg1K3w=",
+        "last_login": "2024-02-05T07:35:55.278Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-01-19T09:13:04.883Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "55d3ojmjr0t2k6wpxon9se666bbv6p2s",
+    "fields": {
+        "session_data": ".eJxVjDsKAjEUAO-SWkL-H0t7zxDey4tmVRLY7Fbi3SWwhbYzw7xZgn2raR9lTQuxM5Ps9MsQ8rO0KegB7d557m1bF-Qz4Ycd_NqpvC5H-zeoMOrcevQo7Y0gGkUuSsQSIAjywpLSEbIQwsTgtJeZnC1KZwlknDYQi_fs8wXbNDdt:1rQkw8:G-k6ShBH_f7ND0P2SXcQlRlOZHVJz-KZW9LvBb4Rhq4",
+        "expire_date": "2024-02-02T09:13:16.262Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "fhtbiwes1oypgnsa23t0puu91nnkj6x9",
+    "fields": {
+        "session_data": ".eJxVjDsKAjEUAO-SWkL-H0t7zxDey4tmVRLY7Fbi3SWwhbYzw7xZgn2raR9lTQuxM5Ps9MsQ8rO0KegB7d557m1bF-Qz4Ycd_NqpvC5H-zeoMOrcevQo7Y0gGkUuSsQSIAjywpLSEbIQwsTgtJeZnC1KZwlknDYQi_fs8wXbNDdt:1rWtWF:bW79k6VzVFpHkPwHcudg7F3EAV-3mQrIlOP3s2DKK4E",
+        "expire_date": "2024-02-19T07:35:55.324Z"
+    }
+},
+{
+    "model": "movie.categories",
+    "pk": 1,
+    "fields": {
+        "name": "Фильмы",
+        "description": "В технологическом плане фильм представляет собой совокупность движущихся изображений (монтажных кадров), связанных единым сюжетом. Каждый монтажный кадр состоит из последовательности неподвижных фотографий (кадриков), на которых зафиксированы отдельные фазы движения. Фильм, как правило, имеет звуковое сопровождение.",
+        "slug": "filmy",
+        "data_create": "2024-02-05T07:49:27.547Z"
+    }
+},
+{
+    "model": "movie.categories",
+    "pk": 2,
+    "fields": {
+        "name": "Сериалы",
+        "description": "Сериал — разновидность телевизионных и радио - передач, которые состоят из отдельных, последовательных эпизодов. Наиболее известным форматом сериалов являются мыльные оперы, начавшие своё существование в 1930-х годах на американском радио. Целью любого сериала является привлечь к экранам на длительный период зрителя и удерживать его интерес к продукту эпизод за эпизодом.",
+        "slug": "serialy",
+        "data_create": "2024-02-07T09:23:53.944Z"
+    }
+},
+{
+    "model": "movie.categories",
+    "pk": 3,
+    "fields": {
+        "name": "Мультфильмы",
+        "description": "Мультфильм — фильм, созданный при помощи средств мультипликации, то есть покадрового запечатления произведённых художником-мультипликатором объёмных и плоских изображений или объектов предметно-реального мира на кино- и видеоплёнке или на цифровых носителях.",
+        "slug": "multfilmy",
+        "data_create": "2024-02-07T09:26:31.079Z"
+    }
+},
+{
+    "model": "movie.directorsactors",
+    "pk": 1,
+    "fields": {
+        "name": "Арнольд Шварценеггер",
+        "description": "Кинематографическая биография Шварценеггера началась в 1969 году. Но, к сожалению, он может претендовать только на незначительные роли, причем практически без слов. Виной всему наличие немецкого акцента и большой мышечной массы, которая даже с его ростом в 188 см была слишком большой – 115 кг. Чтобы достичь большего, Арнольд работает над снижением веса, актерским мастерством и акцентом.\r\nНастоящая слава пришла в Шварценеггеру в 1982 году, после того, как на экраны вышла картина «Конан-варвар». По мнению критиков, картина была никудышной, но зато зритель валил на все сеансы, и в зале не было ни одного свободного места. Потом было принято решение снять продолжение, получившее название «Конан-разрушитель», где Арнольд снова сыграл главную роль. Для этого проекта ему пришлось прибавить в весе 5 кг. И снова признательность и любовь зрителей, и снова решение о продолжении истории. Однако в тот момент Шварценеггер был задействован в другом проекте, поэтому роль главного героя исполнил Кевин Сорбо, и ленту выпустили под названием «Кулл-завоеватель».",
+        "age": 77,
+        "image": "directors_actors/4abd16e628437e15740855546bf3ffaa.jpeg"
+    }
+},
+{
+    "model": "movie.directorsactors",
+    "pk": 2,
+    "fields": {
+        "name": "Фрэнк Дарабонт",
+        "description": "Фрэнк Дарабонт (родился 28 января 1959 года) — американский кинорежиссёр, сценарист и продюсер венгерского происхождения. Был трижды номинирован на «Оскар». Наиболее известен своими удачными экранизациями произведений Стивена.",
+        "age": 65,
+        "image": "directors_actors/235114.jpg"
+    }
+},
+{
+    "model": "movie.directorsactors",
+    "pk": 3,
+    "fields": {
+        "name": "Том Хэнкс",
+        "description": "Том Хэнкс – известный американский актер, режиссер, продюсер, писатель и сценарист, обладатель нескольких «Оскаров». Настоящую славу ему принесли картины «Филадельфия», «Форест Гамп», «Аполлон-13», «Спасти рядового Райана», «Зеленая миля».\r\n\r\nТома Хэнкса называют легендой мирового кинематографа, и это полностью соответствует истине. Каждая его роль – как новая ступенька в карьере, на протяжении стольких лет, идущей по нарастающей. У него практически нет проигрышных образов, каждый его герой чем-то особенный и неповторимый. Хэнкс редко снимается в боевиках или блокбастерах, работы с его участием – это картины о самом важном, добре и человечности, любви и настоящей дружбе.\r\nИсточник: https://biographe.ru/znamenitosti/tom-hanks",
+        "age": 65,
+        "image": "directors_actors/261882.jpg"
+    }
+},
+{
+    "model": "movie.directorsactors",
+    "pk": 4,
+    "fields": {
+        "name": "Стивен Аллан Спилберг",
+        "description": "Стивен Аллан Спилберг (род. 18 декабря 1946) — американский кинорежиссёр, продюсер и сценарист. Одна из ключевых фигур эры Нового Голливуда, пионер современного блокбастера и самый коммерчески успешный режиссёр в истории мирового кинематографа.",
+        "age": 70,
+        "image": "directors_actors/спи-scaled.jpg"
+    }
+},
+{
+    "model": "movie.directorsactors",
+    "pk": 5,
+    "fields": {
+        "name": "Маккензи Дэвис",
+        "description": "awd",
+        "age": 33,
+        "image": ""
+    }
+},
+{
+    "model": "movie.directorsactors",
+    "pk": 6,
+    "fields": {
+        "name": "Эдвард Ферлонг",
+        "description": "awd",
+        "age": 22,
+        "image": ""
+    }
+},
+{
+    "model": "movie.directorsactors",
+    "pk": 7,
+    "fields": {
+        "name": "Линда Хэмилтон",
+        "description": "222",
+        "age": 22,
+        "image": ""
+    }
+},
+{
+    "model": "movie.directorsactors",
+    "pk": 8,
+    "fields": {
+        "name": "Кассандра Старр",
+        "description": "222",
+        "age": 22,
+        "image": ""
+    }
+},
+{
+    "model": "movie.directorsactors",
+    "pk": 9,
+    "fields": {
+        "name": "Гэбриел Луна",
+        "description": "awd",
+        "age": 22,
+        "image": ""
+    }
+},
+{
+    "model": "movie.directorsactors",
+    "pk": 10,
+    "fields": {
+        "name": "Стивен Кри",
+        "description": "awdwad",
+        "age": 333,
+        "image": ""
+    }
+},
+{
+    "model": "movie.genre",
+    "pk": 1,
+    "fields": {
+        "title": "боевик",
+        "slug": "boevik",
+        "description": "Боевик - это жанр фильма, который характеризуется высокой интенсивностью действия, напряженными сценами боя, погони и столкновений. В фильмах этого жанра часто присутствуют герои, которые сталкиваются с опасными ситуациями и используют свои навыки в бою, чтобы преодолеть препятствия и достичь своих целей. Боевики обычно содержат динамичные сцены с использованием оружия, езды на автомобилях, эксплозий и других спецэффектов, чтобы создать атмосферу напряжения и возбуждения у зрителей. Этот жанр часто сочетается с другими, такими как приключения, триллер или научная фантастика, чтобы добавить дополнительные элементы интриги и фантастического мира."
+    }
+},
+{
+    "model": "movie.genre",
+    "pk": 2,
+    "fields": {
+        "title": "драма",
+        "slug": "drama",
+        "description": "Драма - это жанр кино, который фокусируется на эмоциональных и психологических аспектах человеческой жизни. Фильмы в жанре драмы обычно исследуют сложные чувства, внутренние конфликты, моральные дилеммы и глубокие эмоциональные переживания персонажей. Они могут затрагивать широкий спектр тем, включая любовь, потерю, семейные отношения, социальные проблемы и личные трагедии. Фильмы в жанре драмы часто стремятся вызвать сильные эмоциональные реакции у зрителей и заставить их задуматься о глубинных аспектах человеческой природы и условий существования."
+    }
+},
+{
+    "model": "movie.genre",
+    "pk": 3,
+    "fields": {
+        "title": "фантастика",
+        "slug": "fantastika",
+        "description": "фантастика"
+    }
+},
+{
+    "model": "movie.movie",
+    "pk": 1,
+    "fields": {
+        "title": "Терминатор",
+        "slug": "terminator",
+        "tagline": "Война между человеком и машиной достигает нового уровня",
+        "content": "История противостояния солдата Кайла Риза и киборга-терминатора, прибывших в 1984 год из пост-апокалиптического будущего, где миром правят машины-убийцы, а человечество находится на грани вымирания.",
+        "poster": "poster/ef0bfe28203139.56371454283f9.jpg",
+        "data_movie": "1984-02-05T07:48:39Z",
+        "country": "США, Великобритания",
+        "premiere": "1984",
+        "budget": "6 400 000",
+        "url": "https://www.youtube.com/embed/uA4k5Vc5jFc?si=ku0_3CQzexrQnuG4",
+        "fees_world": "78 371 200",
+        "category": 1,
+        "active": true,
+        "date_create": "2024-02-09T13:02:22Z",
+        "director": [
+            1
+        ],
+        "actors": [
+            1,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "genre": [
+            1,
+            3
+        ]
+    }
+},
+{
+    "model": "movie.movie",
+    "pk": 2,
+    "fields": {
+        "title": "Зеленая миля",
+        "slug": "zelenaya-milya",
+        "tagline": "Глубокая душевная сила и непреодолимая надежда",
+        "content": "Это захватывающая драма, основанная на романе Стивена Кинга. Рассказывая историю охранника в тюремном блоке смертников в Луизиане, фильм исследует темы надежды, человеческой жестокости, справедливости и милосердия. Главный герой, Пол Эджкомб, сталкивается с мистическими событиями и непростыми моральными выборами, которые меняют его жизнь навсегда. 'Зеленая миля' впечатляет своей сильной актерской игрой, глубокими эмоциональными моментами и потрясающей атмосферой, оставляя зрителей задумываться о смысле жизни и силе человеческой доброты.",
+        "poster": "poster/3454414_mile_b.jpg",
+        "data_movie": "1999-02-07T09:33:04Z",
+        "country": "США",
+        "premiere": "1999",
+        "budget": "60 000 000",
+        "url": "https://www.youtube.com/embed/TODt_q-_4C4?si=zjGzyfUiM2OgSZGW",
+        "fees_world": "286 801 374",
+        "category": 1,
+        "active": true,
+        "date_create": "2024-02-09T13:02:22Z",
+        "director": [
+            2
+        ],
+        "actors": [
+            3
+        ],
+        "genre": [
+            1
+        ]
+    }
+},
+{
+    "model": "movie.movie",
+    "pk": 3,
+    "fields": {
+        "title": "Спасти рядового Райана",
+        "slug": "spasti-ryadovogo-rajana",
+        "tagline": "Один человек. Один отряд. Одна миссия.",
+        "content": "Эпическая военная драма, рассказывающая историю группы американских солдат, отправленных во время Второй мировой войны на спасательную миссию. Целью миссии является поиск и спасение рядового Джеймса Фрэнсиса Райана, чей браты погибли на поле битвы. Фильм исследует темы доблести, жертвы и солидарности, подчеркивая важность человеческой жизни во время войны. Режиссер Стивен Спилберг создал захватывающую и эмоционально заряженную историю, которая оставляет зрителей задумываться о цене мира и смысле жертвы.",
+        "poster": "poster/062350da32a6e9d718c3df8bc185ca5c.jpg",
+        "data_movie": "1998-02-08T07:59:46Z",
+        "country": "фцв",
+        "premiere": "1998",
+        "budget": "70 000 000",
+        "url": "https://www.youtube.com/embed/9CiW_DgxCnQ?si=BY3AS1fHNAwvFfRr",
+        "fees_world": "216 540 909",
+        "category": 1,
+        "active": true,
+        "date_create": "2024-02-09T13:02:22.339Z",
+        "director": [
+            4
+        ],
+        "actors": [
+            3
+        ],
+        "genre": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "movie.movie",
+    "pk": 4,
+    "fields": {
+        "title": "Терминатор 2: Судный день",
+        "slug": "terminator-2-sudnyj-den",
+        "tagline": "Почувствуйте финальную схватку за человечество.",
+        "content": "Прошло более десяти лет с тех пор, как киборг из 2029 года пытался уничтожить Сару Коннор — женщину, чей будущий сын выиграет войну человечества против машин.\r\n\r\nТеперь у Сары родился сын Джон и время, когда он поведёт за собой выживших людей на борьбу с машинами, неумолимо приближается. Именно в этот момент из постапокалиптического будущего прибывает новый терминатор — практически неуязвимая модель T-1000, способная принимать любое обличье. Цель нового терминатора уже не Сара, а уничтожение молодого Джона Коннора.\r\n\r\nОднако шансы Джона на спасение существенно повышаются, когда на помощь приходит перепрограммированный сопротивлением терминатор предыдущего поколения. Оба киборга вступают в смертельный бой, от исхода которого зависит судьба человечества.",
+        "poster": "poster/7995304.jpg",
+        "data_movie": "1991-02-08T08:06:42Z",
+        "country": "США",
+        "premiere": "1991",
+        "budget": "102 000 000",
+        "url": "https://www.youtube.com/embed/lwSysg9o7wE?si=NxJRLzkcdu4v82r-",
+        "fees_world": "204 000 000",
+        "category": 1,
+        "active": true,
+        "date_create": "2024-02-09T13:02:22.339Z",
+        "director": [
+            1
+        ],
+        "actors": [
+            1
+        ],
+        "genre": [
+            1
+        ]
+    }
+},
+{
+    "model": "movie.movie",
+    "pk": 5,
+    "fields": {
+        "title": "Форрест Гамп",
+        "slug": "forrest-gamp",
+        "tagline": "Жизнь — это как коробка шоколадных конфет",
+        "content": "Сидя на автобусной остановке, Форрест Гамп — не очень умный, но добрый и открытый парень — рассказывает случайным встречным историю своей необыкновенной жизни.\r\n\r\nС самого малолетства парень страдал от заболевания ног, соседские мальчишки дразнили его, но в один прекрасный день Форрест открыл в себе невероятные способности к бегу. Подруга детства Дженни всегда его поддерживала и защищала, но вскоре дороги их разошлись.",
+        "poster": "poster/2uawsFqc466LgucUgKBUQqPbbAe.jpg",
+        "data_movie": "1994-02-08T08:11:57Z",
+        "country": "США",
+        "premiere": "1994",
+        "budget": "55 000 000",
+        "url": "https://www.youtube.com/embed/otmeAaifX04?si=g3f2Id2SNFdnEZQP",
+        "fees_world": "329 694 499",
+        "category": 1,
+        "active": true,
+        "date_create": "2024-02-09T13:02:22.339Z",
+        "director": [
+            3
+        ],
+        "actors": [
+            3
+        ],
+        "genre": [
+            2
+        ]
+    }
+},
+{
+    "model": "movie.movie",
+    "pk": 6,
+    "fields": {
+        "title": "В погоне за счастьем",
+        "slug": "v-pogone-za-schastem",
+        "tagline": "Верь в свою мечту и не останавливайся.",
+        "content": "Крис Гарднер – отец-одиночка. Воспитывая пятилетнего сына, Крис изо всех сил старается сделать так, чтобы ребенок рос счастливым. Работая продавцом, он не может оплатить квартиру, и их выселяют.\r\n\r\nОказавшись на улице, но не желая сдаваться, отец устраивается стажером в брокерскую компанию, рассчитывая получить должность специалиста. Только на протяжении стажировки он не будет получать никаких денег, а стажировка длится 6 месяцев...",
+        "poster": "poster/scale_1200.jfif",
+        "data_movie": "2006-02-08T08:15:58Z",
+        "country": "США",
+        "premiere": "1994",
+        "budget": "фцв",
+        "url": "https://www.youtube.com/embed/z30kGHfymqY?si=8U-zHMqG4mdgEk4g",
+        "fees_world": "фвц",
+        "category": 1,
+        "active": true,
+        "date_create": "2024-02-09T13:02:22.339Z",
+        "director": [
+            4
+        ],
+        "actors": [
+            3
+        ],
+        "genre": [
+            2
+        ]
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 1,
+    "fields": {
+        "title": "nthvbyfnjh",
+        "description": "терминатор",
+        "image": "stills_film/3.jpg",
+        "film": 1
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 2,
+    "fields": {
+        "title": "терминатор к2",
+        "description": "терминатор к2",
+        "image": "stills_film/1.jpg",
+        "film": 1
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 3,
+    "fields": {
+        "title": "терминатор к2",
+        "description": "терминатор к2",
+        "image": "stills_film/2_8oyVloH.jpg",
+        "film": 1
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 4,
+    "fields": {
+        "title": "зеленая миля1",
+        "description": "зеленая миля1",
+        "image": "stills_film/11.jpg",
+        "film": 2
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 5,
+    "fields": {
+        "title": "зеленая миля1",
+        "description": "зеленая миля1",
+        "image": "stills_film/22.jpg",
+        "film": 2
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 6,
+    "fields": {
+        "title": "зеленая миля1",
+        "description": "зеленая миля1",
+        "image": "stills_film/33.jpg",
+        "film": 2
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 7,
+    "fields": {
+        "title": "спасти рядового райна",
+        "description": "спасти рядового райна",
+        "image": "stills_film/1.jpeg",
+        "film": 3
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 8,
+    "fields": {
+        "title": "спасти рядового райна",
+        "description": "спасти рядового райна",
+        "image": "stills_film/22.jfif",
+        "film": 3
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 9,
+    "fields": {
+        "title": "спасти рядового райна",
+        "description": "спасти рядового райна",
+        "image": "stills_film/33.jpeg",
+        "film": 3
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 10,
+    "fields": {
+        "title": "терминатор2",
+        "description": "терминатор2",
+        "image": "stills_film/2_tsGOOc1.jpg",
+        "film": 4
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 11,
+    "fields": {
+        "title": "терминатор2",
+        "description": "терминатор2",
+        "image": "stills_film/3_JWdo0JO.jpg",
+        "film": 4
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 12,
+    "fields": {
+        "title": "терминатор2",
+        "description": "терминатор2",
+        "image": "stills_film/1_fUKG2hB.jpg",
+        "film": 4
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 13,
+    "fields": {
+        "title": "форест гамп",
+        "description": "форест гамп",
+        "image": "stills_film/22.jpeg",
+        "film": 5
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 14,
+    "fields": {
+        "title": "форест гамп",
+        "description": "форест гамп",
+        "image": "stills_film/11_8xuU5VM.jpg",
+        "film": 5
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 15,
+    "fields": {
+        "title": "форест гамп",
+        "description": "форест гамп",
+        "image": "stills_film/33.png",
+        "film": 5
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 16,
+    "fields": {
+        "title": "в погоне за счастьем",
+        "description": "в погоне за счастьем",
+        "image": "stills_film/111.jfif",
+        "film": 6
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 17,
+    "fields": {
+        "title": "в погоне за счастьем",
+        "description": "в погоне за счастьем",
+        "image": "stills_film/222.jpg",
+        "film": 6
+    }
+},
+{
+    "model": "movie.stillsfilm",
+    "pk": 18,
+    "fields": {
+        "title": "в погоне за счастьем",
+        "description": "в погоне за счастьем",
+        "image": "stills_film/333.jpeg",
+        "film": 6
+    }
+},
+{
+    "model": "movie.ratingstars",
+    "pk": 1,
+    "fields": {
+        "rating": 5
+    }
+},
+{
+    "model": "movie.ratingstars",
+    "pk": 2,
+    "fields": {
+        "rating": 4
+    }
+},
+{
+    "model": "movie.ratingstars",
+    "pk": 3,
+    "fields": {
+        "rating": 3
+    }
+},
+{
+    "model": "movie.reviews",
+    "pk": 1,
+    "fields": {
+        "name": "wadaw",
+        "email": "awd@wda.awd",
+        "text": "awdwa",
+        "parent": null,
+        "movie": 2
+    }
+},
+{
+    "model": "movie.reviews",
+    "pk": 3,
+    "fields": {
+        "name": "awd",
+        "email": "awdwd@adw.awdawd",
+        "text": "awdwa",
+        "parent": null,
+        "movie": 3
+    }
+},
+{
+    "model": "movie.reviews",
+    "pk": 4,
+    "fields": {
+        "name": "awdawdwadawd",
+        "email": "awd@adwwda.awdwad",
+        "text": "awd",
+        "parent": null,
+        "movie": 1
+    }
+},
+{
+    "model": "movie.reviews",
+    "pk": 5,
+    "fields": {
+        "name": "awdwadwa",
+        "email": "awdawdwa@awd.awdawd",
+        "text": "awdwadwawas222",
+        "parent": null,
+        "movie": 1
+    }
+},
+{
+    "model": "movie.reviews",
+    "pk": 6,
+    "fields": {
+        "name": "a222",
+        "email": "awd@awd.awd",
+        "text": "s2222",
+        "parent": null,
+        "movie": 3
+    }
+},
+{
+    "model": "movie.reviews",
+    "pk": 7,
+    "fields": {
+        "name": "awdawdwa",
+        "email": "wad@awd.awdawd",
+        "text": "awdawdaw",
+        "parent": null,
+        "movie": 5
+    }
+}
+]

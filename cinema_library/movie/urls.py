@@ -6,5 +6,4 @@ urlpatterns = [
     path('movie-filtering/', movie_filtering, name='movie_filtering'),
     path('<slug:slug>/', MovieDetailView.as_view(), name='movie_detail'),
     path('review/<int:pk>/', ReviewHandle.as_view(), name='review_handle'),
-
 ]

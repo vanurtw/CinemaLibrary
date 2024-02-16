@@ -14,21 +14,23 @@
             </button>
         </form>
     </div>
-    <form action="{% url 'movie_filtering' %}">
+    <form action="{% url 'movie_filtering' %}" method="post">
         {% csrf_token %}
         <div class="left-side my-4">
             <h3 class="sear-head editContent">Жанры</h3>
             {% genry_tags as genre %}
             <ul class="w3layouts-box-list">
+
                 {% for item in genre %}
                 <li class="editContent">
-                    <input type="checkbox" class="checked">
-                    <span class="span editContent">{{item}}</span>
+                    <input type="radio" class="checked" name="genre" value="{{item}}">{{item}}
+                    <!--                    <span class="span editContent">{{item}}</span>-->
                 </li>
                 {% endfor %}
             </ul>
         </div>
         {% year_side %}
+        <button type="submit">Применить фильтр</button>
     </form>
     <div class="customer-rev left-side my-4">
         <h3 class="sear-head editContent">Рейтинг</h3>

@@ -5,7 +5,6 @@ from .forms import ReviewsForm
 from django.http import HttpResponse
 from django.contrib import messages
 
-
 # Create your views here.
 
 

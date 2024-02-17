@@ -166,7 +166,24 @@
                                             style="outline: none; cursor: inherit;">Отправить
                                     </button>
                                 </form>
-                                {{parent_comment}}
+                                {% for i in form %}
+
+                                {% if forloop.last %}
+                                <div class="form-group editContent"
+                                     style="outline: none; cursor: inherit;">
+                                    <label for="contactcomment" class="editContent"
+                                           style="outline: none; cursor: inherit;">{{i.label}}</label>
+                                    {{i}}
+                                </div>
+                                {% else %}
+                                <div class="col-sm-6 form-group p-0 editContent"
+                                     style="outline: none; cursor: inherit;">
+                                    <label for="contactusername" class="editContent"
+                                           style="outline: none; cursor: inherit;">{{i.label}}</label>
+                                    {{i}}
+                                </div>
+                                {% endif %}
+                                {% endfor %}
 
 
                             </div>

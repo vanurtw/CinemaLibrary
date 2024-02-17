@@ -85,7 +85,8 @@ class Movie(models.Model):
     )
     budget = models.CharField(max_length=255, verbose_name='Бюджет')
     url = models.URLField(verbose_name='Ссылка на трейлер фильма')
-    rating = models.ForeignKey(RatingStars, on_delete=models.CASCADE, verbose_name='Рейтинг', related_name='movies', default=5)
+    rating = models.ForeignKey(RatingStars, on_delete=models.CASCADE, verbose_name='Рейтинг', related_name='movies',
+                               default=5)
     fees_world = models.CharField(max_length=255, verbose_name='Cборы в мире')
     category = models.ForeignKey(Categories, on_delete=models.CASCADE, verbose_name='Категория')
     active = models.BooleanField(default=True, verbose_name='Активный')
@@ -128,7 +129,8 @@ class Reviews(models.Model):
     parent = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='Родитель', blank=True, null=True,
                                related_name='parents')
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name='Фильм', related_name='reviews')
-
+    rating = models.ForeignKey(RatingStars, on_delete=models.PROTECT, related_name='comments', verbose_name='Рейтинг',
+                               default=4)
     class Meta:
         verbose_name = 'Отзыв'
         verbose_name_plural = 'Отзывы'

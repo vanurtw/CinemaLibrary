@@ -66,14 +66,21 @@ class ReviewHandle(View):
         return render(request, 'movie/moviesingle.html', {'parent_comment': parent_id_comment, 'movie': movie})
 
 
-def movie_filtering(request):
-    genre = request.POST.get('genre', None)
-    year = request.POST.get('year', None)
-    if genre:
-        movies = Movie.objects.filter(genre__title=genre)
-    elif year:
-        movies = Movie.objects.filter(premiere=year)
-    else:
-        messages.error(request, 'Филтры не были выбраны')
-        movies = Movie.objects.all()
-    return render(request, 'movie/movies.html', {'movies': movies})
+class MovieFilterView(View):
+    def get(self, request):
+        star = request.GET.get('star', None)
+        movies = Movie.objects.filter(rating__rating=star)
+        ratings_star = RatingStars.objects.all()
+        return render(request, 'movie/movies.html', {'movies': movies, 'ratings_star': ratings_star})
+
+    def post(self, request):
+        genre = request.POST.get('genre', None)
+        year = request.POST.get('year', None)
+        if genre:
+            movies = Movie.objects.filter(genre__title=genre)
+        elif year:
+            movies = Movie.objects.filter(premiere=year)
+        else:
+            messages.error(request, 'Филтры не были выбраны')
+            movies = Movie.objects.all()
+        return render(request, 'movie/movies.html', {'movies': movies})

@@ -1,5 +1,5 @@
 from django.template import Library
-from movie.models import Genre, Movie, Categories
+from movie.models import Genre, Movie, Categories, RatingStars
 
 register = Library()
 
@@ -34,3 +34,9 @@ def year_side_paid():
 def last_append():
     last_movie_create = Movie.objects.all().order_by('-date_create')[:4]
     return {'last_movie_create': last_movie_create}
+
+
+@register.inclusion_tag(filename='tags/rating_stars.html', name='rating_stars')
+def rating_tars():
+    rating_tars = RatingStars.objects.all()
+    return {'ratings_stars': rating_tars}

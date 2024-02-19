@@ -26,8 +26,6 @@ class MovieListView(ListView):
 
     def get_context_data(self, *args, object_list=None, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        ratings_star = RatingStars.objects.all()
-        context['ratings_star'] = ratings_star
         return context
 
 
@@ -74,9 +72,8 @@ class MovieFilterView(View):
     def get(self, request):
         star = request.GET.get('star', None)
         if star:
-            movies = Movie.objects.filter(rating__rating=star)
-            ratings_star = RatingStars.objects.all()
-            return render(request, 'movie/movies.html', {'movies': movies, 'ratings_star': ratings_star})
+            movies = Movie.objects.filter(rating=star)
+            return render(request, 'movie/movies.html', {'movies': movies})
         genres = request.GET.getlist('genre')
         if genres:
             movies = Movie.objects.filter(genre__title__in=genres).distinct()

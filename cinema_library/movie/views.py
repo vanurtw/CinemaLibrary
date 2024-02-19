@@ -67,15 +67,29 @@ class ReviewHandle(View):
         form = ReviewsForm()
         form.initial['text'] = f'{parent_comment.name}, '
         return render(request, 'movie/moviesingle.html',
-                      {'parent_comment': parent_id_comment, 'movie': movie, 'form': form,})
+                      {'parent_comment': parent_id_comment, 'movie': movie, 'form': form, })
 
 
 class MovieFilterView(View):
     def get(self, request):
         star = request.GET.get('star', None)
-        movies = Movie.objects.filter(rating__rating=star)
-        ratings_star = RatingStars.objects.all()
-        return render(request, 'movie/movies.html', {'movies': movies, 'ratings_star': ratings_star})
+        if star:
+            movies = Movie.objects.filter(rating__rating=star)
+            ratings_star = RatingStars.objects.all()
+            return render(request, 'movie/movies.html', {'movies': movies, 'ratings_star': ratings_star})
+        genres = request.GET.getlist('genre')
+        if genres:
+            movies = Movie.objects.filter(genre__title__in=genres).distinct()
+        years = request.GET.getlist('year')
+        if years:
+            if genres:
+                movies = movies.filter(premiere__in=years)
+            else:
+                movies = Movie.objects.filter(premiere__in=years)
+        if not (genres or  years):
+            messages.error(request, 'Филтры не были выбраны')
+            movies = Movie.objects.all()
+        return render(request, 'movie/movies.html', {'movies': movies})
 
     def post(self, request):
         genre = request.POST.get('genre', None)

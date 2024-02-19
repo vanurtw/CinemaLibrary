@@ -20,8 +20,7 @@
 </div>
 {% endfor %}
 {% endif %}
-<form action="{% url 'movie_filtering' %}" method="post">
-    {% csrf_token %}
+<form action="{% url 'movie_filtering' %}" method="get">
     <div class="left-side my-4">
         <h3 class="sear-head editContent">Жанры</h3>
         {% genry_tags as genre %}
@@ -29,7 +28,7 @@
 
             {% for item in genre %}
             <li class="editContent">
-                <input type="radio" class="checked" name="genre" value="{{item}}"> {{item}}
+                <input type="checkbox" class="checked" name="genre" value="{{item}}"> {{item}}
                 <!--                    <span class="span editContent">{{item}}</span>-->
             </li>
             {% endfor %}

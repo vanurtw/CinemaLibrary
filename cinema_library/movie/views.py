@@ -63,9 +63,11 @@ class ReviewHandle(View):
         movie_id = kwargs.get('pk')
         movie = get_object_or_404(Movie, id=movie_id)
         parent_id_comment = request.GET.get('parent')
+        parent_comment = Reviews.objects.get(id=parent_id_comment)
         form = ReviewsForm()
+        form.initial['text'] = f'{parent_comment.name}, '
         return render(request, 'movie/moviesingle.html',
-                      {'parent_comment': parent_id_comment, 'movie': movie, 'form': form})
+                      {'parent_comment': parent_id_comment, 'movie': movie, 'form': form,})
 
 
 class MovieFilterView(View):

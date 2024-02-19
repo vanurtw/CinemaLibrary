@@ -86,19 +86,7 @@ class MovieFilterView(View):
                 movies = movies.filter(premiere__in=years)
             else:
                 movies = Movie.objects.filter(premiere__in=years)
-        if not (genres or  years):
-            messages.error(request, 'Филтры не были выбраны')
-            movies = Movie.objects.all()
-        return render(request, 'movie/movies.html', {'movies': movies})
-
-    def post(self, request):
-        genre = request.POST.get('genre', None)
-        year = request.POST.get('year', None)
-        if genre:
-            movies = Movie.objects.filter(genre__title=genre)
-        elif year:
-            movies = Movie.objects.filter(premiere=year)
-        else:
+        if not (genres or years):
             messages.error(request, 'Филтры не были выбраны')
             movies = Movie.objects.all()
         return render(request, 'movie/movies.html', {'movies': movies})

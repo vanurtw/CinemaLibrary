@@ -85,8 +85,8 @@ class Movie(models.Model):
     )
     budget = models.CharField(max_length=255, verbose_name='Бюджет')
     url = models.URLField(verbose_name='Ссылка на трейлер фильма')
-    rating = models.ForeignKey(RatingStars, on_delete=models.CASCADE, verbose_name='Рейтинг', related_name='movies',
-                               default=5)
+    rating = models.CharField(max_length=20, verbose_name='Рейтинг',
+                              default=5)
     fees_world = models.CharField(max_length=255, verbose_name='Cборы в мире')
     category = models.ForeignKey(Categories, on_delete=models.CASCADE, verbose_name='Категория')
     active = models.BooleanField(default=True, verbose_name='Активный')
@@ -131,9 +131,25 @@ class Reviews(models.Model):
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name='Фильм', related_name='reviews')
     rating = models.ForeignKey(RatingStars, on_delete=models.PROTECT, related_name='comments', verbose_name='Рейтинг',
                                blank=True, null=True)
+
     class Meta:
         verbose_name = 'Отзыв'
         verbose_name_plural = 'Отзывы'
 
     def __str__(self):
         return f'{self.name}_{self.movie.title}'
+
+    def save(self, *args, **kwargs):
+        if not self.parent:
+            review_rating_movie = self.movie.reviews.filter(~Q(rating=None), Q(parent=None)).values_list(
+                'rating__rating')
+            rating = 0
+            count = 0
+            for i in review_rating_movie:
+                rating += int(i[0])
+                count += 1
+            rating += int(self.rating.rating)
+            count += 1
+            self.movie.rating = round(rating/count)
+            self.movie.save()
+        super().save(*args, **kwargs)

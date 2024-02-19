@@ -130,7 +130,7 @@ class Reviews(models.Model):
                                related_name='parents')
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name='Фильм', related_name='reviews')
     rating = models.ForeignKey(RatingStars, on_delete=models.PROTECT, related_name='comments', verbose_name='Рейтинг',
-                               default=4)
+                               blank=True, null=True)
     class Meta:
         verbose_name = 'Отзыв'
         verbose_name_plural = 'Отзывы'

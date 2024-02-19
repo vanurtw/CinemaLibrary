@@ -5,6 +5,7 @@ from .forms import ReviewsForm
 from django.http import HttpResponse
 from django.contrib import messages
 
+
 # Create your views here.
 
 
@@ -49,7 +50,7 @@ class ReviewHandle(View):
         movie = get_object_or_404(Movie, id=movie_id)
         form = ReviewsForm(request.POST)
         if form.is_valid():
-            parent_id = request.POST.get('parent_id', None)
+            parent_id = request.POST.get('parent', None)
             form = form.save(commit=False)
             form.movie = movie
             if parent_id:
@@ -62,7 +63,9 @@ class ReviewHandle(View):
         movie_id = kwargs.get('pk')
         movie = get_object_or_404(Movie, id=movie_id)
         parent_id_comment = request.GET.get('parent')
-        return render(request, 'movie/moviesingle.html', {'parent_comment': parent_id_comment, 'movie': movie})
+        form = ReviewsForm()
+        return render(request, 'movie/moviesingle.html',
+                      {'parent_comment': parent_id_comment, 'movie': movie, 'form': form})
 
 
 class MovieFilterView(View):

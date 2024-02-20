@@ -31,9 +31,13 @@ class MovieListView(ListView):
 
 class MovieDetailView(DetailView):
     template_name = 'movie/moviesingle.html'
-    model = Movie
     slug_url_kwarg = 'slug'
     context_object_name = 'movie'
+
+    def get_queryset(self):
+        slug = self.kwargs.get('slug')
+        movie = Movie.objects.filter(slug=slug)
+        return movie
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

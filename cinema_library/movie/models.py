@@ -3,6 +3,8 @@ from django.db import models
 from datetime import datetime
 from django.shortcuts import reverse
 from django.db.models import Q
+from changed.signals import my_signal_test
+from django.db.models.signals import post_save
 
 
 # Create your models here.
@@ -153,3 +155,6 @@ class Reviews(models.Model):
             self.movie.rating = round(rating/count)
             self.movie.save()
         super().save(*args, **kwargs)
+
+
+post_save.connect(my_signal_test, sender=Movie)

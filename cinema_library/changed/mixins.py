@@ -14,7 +14,7 @@ class ChangLoggableMixin(models.Model):
             field.name not in ['data_create'] and hasattr(self, field.name)
         }
 
-    def change_data(self, *args, **kwargs):
+    def change_data(self):
         result = {}
         for key, value in self._original_values.items():
             if value != getattr(self, key):

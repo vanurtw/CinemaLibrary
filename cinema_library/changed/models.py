@@ -23,3 +23,7 @@ class ChangeLog(models.Model):
 
     class Meta:
         ordering = ['data_create']
+        verbose_name = 'История'
+        verbose_name_plural = 'История'
+
+

@@ -9,7 +9,7 @@ ACTION_UPDATE = 'Изменил'
 ACTION_DELETE = 'Удалил'
 
 
-class ChangeLog(ChangLoggableMixin, models.Model):
+class ChangeLog(models.Model):
     ACTION = [
         (ACTION_CREATE, 'Создал'),
         (ACTION_UPDATE, 'Изменил'),

@@ -5,7 +5,7 @@ from django.shortcuts import reverse
 from django.db.models import Q
 from changed.signals import my_signal_test
 from django.db.models.signals import post_save
-
+from changed.mixins import ChangLoggableMixin
 
 # Create your models here.
 class NotParentManager(models.Manager):
@@ -70,7 +70,7 @@ class RatingStars(models.Model):
 
 
 # Фильмы
-class Movie(models.Model):
+class Movie(ChangLoggableMixin, models.Model):
     title = models.CharField(max_length=255, verbose_name='Название')
     slug = models.SlugField()
     tagline = models.CharField(max_length=255, verbose_name='Слоган', blank=True)

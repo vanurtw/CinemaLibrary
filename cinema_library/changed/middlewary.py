@@ -1,19 +1,22 @@
 class SingletonLog(object):
-    instance = None
-
-    def __new__(cls, *args, **kwargs):
-        if not cls.instance:
-            cls.instance = super().__new__(*args, **kwargs)
+    def __new__(cls):
+        if not hasattr(cls, 'instance'):
+            cls.instance = super(SingletonLog, cls).__new__(cls)
         return cls.instance
 
 
-class LoggedInUser(metaclass=SingletonLog):
+class LoggedInUser:
+    def __new__(cls):
+        if not hasattr(cls, 'instance'):
+            cls.instance = super(LoggedInUser, cls).__new__(cls)
+        return cls.instance
+
     user = None
     request = None
 
     def set_data(self, request):
-        self.request = request
-        if self.user.is_authenticated():
+        self.request = id(request)
+        if request.user.is_authenticated:
             self.user = request.user
 
     @property
@@ -32,7 +35,5 @@ class LoggedChangedMiddlewary(object):
     def __call__(self, request):
         logged_in_user = LoggedInUser()
         logged_in_user.set_data(request)
-
         responce = self.get_responce(request)
-
         return responce

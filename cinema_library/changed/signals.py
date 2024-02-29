@@ -6,18 +6,16 @@ from .middlewary import LoggedInUser
 
 
 def my_signal_test(sender, instance, created, **kwargs):
-    # if isinstance(instance, ChangLoggableMixin):
-    #     if created:
-    #         pass
-    #     else:
-    #         print('a')
-
     if isinstance(instance, ChangLoggableMixin):
         logged_in = LoggedInUser()
         if created:
-            pass
+            action = ACTION_CREATE
+            user = logged_in.user
+            data = {}
+            ChangeLog.add(instance, user, action, data)
         else:
             data = instance.change_data()
-            action = ACTION_UPDATE
-            user = logged_in.current_user
-            ChangeLog.add(instance, user, action, data)
+            if data:
+                action = ACTION_UPDATE
+                user = logged_in.current_user
+                ChangeLog.add(instance, user, action, data)

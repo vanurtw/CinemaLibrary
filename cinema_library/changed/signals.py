@@ -3,6 +3,7 @@ from django.dispatch import receiver
 from .mixins import ChangLoggableMixin
 from .models import ChangeLog, ACTION_CREATE, ACTION_DELETE, ACTION_UPDATE
 from .middlewary import LoggedInUser
+import json
 
 
 def my_signal_test(sender, instance, created, **kwargs):
@@ -14,8 +15,9 @@ def my_signal_test(sender, instance, created, **kwargs):
             data = {}
             ChangeLog.add(instance, user, action, data)
         else:
-            data = instance.change_data()
+            data = json.loads(json.dumps(instance.change_data()))
             if data:
                 action = ACTION_UPDATE
                 user = logged_in.current_user
                 ChangeLog.add(instance, user, action, data)
+

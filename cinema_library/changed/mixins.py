@@ -18,5 +18,5 @@ class ChangLoggableMixin(models.Model):
         result = {}
         for key, value in self._original_values.items():
             if value != getattr(self, key):
-                result[key] = getattr(self, key)
+                result[key] = str(getattr(self, key))
         return result

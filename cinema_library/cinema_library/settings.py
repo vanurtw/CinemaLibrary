@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'movie',
     'changed',
-    'debug_toolbar'
+    'debug_toolbar',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

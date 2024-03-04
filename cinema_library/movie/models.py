@@ -1,6 +1,4 @@
-from django.contrib.auth import get_user_model
 from django.db import models
-from datetime import datetime
 from django.shortcuts import reverse
 from django.db.models import Q
 from changed.signals import my_signal_test

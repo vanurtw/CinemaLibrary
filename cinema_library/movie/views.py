@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, View
-from .models import Movie, Reviews, Categories, RatingStars, Genre
+from .models import Movie, Reviews
 from .forms import ReviewsForm
-from django.http import HttpResponse
 from django.contrib import messages
 
 

@@ -1,7 +1,5 @@
-from django.db.models.signals import post_save
-from django.dispatch import receiver
 from .mixins import ChangLoggableMixin
-from .models import ChangeLog, ACTION_CREATE, ACTION_DELETE, ACTION_UPDATE
+from .models import ChangeLog, ACTION_CREATE, ACTION_UPDATE
 from .middlewary import LoggedInUser
 import json
 

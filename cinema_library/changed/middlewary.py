@@ -25,7 +25,7 @@ class LoggedInUser:
 
     @property
     def have_user(self):
-        return not self.user is None
+        return self.user is not None
 
 
 class LoggedChangedMiddlewary(object):

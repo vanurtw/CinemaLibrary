@@ -25,6 +25,7 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
     path('test/', test, ),
     path('', include('movie.urls')),
+    path('api/', include('api.urls')),
 
 ]
 

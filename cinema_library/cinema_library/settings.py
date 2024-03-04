@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'movie',
     'changed',
     'debug_toolbar',
+    'api',
     'rest_framework',
 ]
 

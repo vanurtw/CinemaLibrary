@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from movie.models import Categories
 
 
 class HomeListSerializer(serializers.Serializer):
@@ -6,9 +7,18 @@ class HomeListSerializer(serializers.Serializer):
     tagline = serializers.CharField(max_length=255)
     rating = serializers.IntegerField()
     images = serializers.CharField(source='poster')
-
-    def create(self, validated_data):
-        pass
-
     # def update(self, instance, validated_data):
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Categories
+        fields = ['name', 'slug']
+
+
+class YearSerializer(serializers.Serializer):
+    data = serializers.DateTimeField(source='premiere')
+
+
+
 

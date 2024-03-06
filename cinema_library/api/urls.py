@@ -3,11 +3,11 @@ from . import views
 from rest_framework import routers
 
 
-router = routers.SimpleRouter()
-router.register('', views.HomeViewListGeneric)
+
 
 urlpatterns = [
-    path('movie-all/', include(router.urls)),
+    path('movie-all/', views.ListViewAPI.as_view()),
+    path('categories-all/', views.CategoryAPI.as_view()),
 
 
 ]

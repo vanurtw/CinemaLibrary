@@ -6,3 +6,9 @@ class HomeListSerializer(serializers.Serializer):
     tagline = serializers.CharField(max_length=255)
     rating = serializers.IntegerField()
     images = serializers.CharField(source='poster')
+
+    def create(self, validated_data):
+        pass
+
+    # def update(self, instance, validated_data):
+

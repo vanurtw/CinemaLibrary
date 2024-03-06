@@ -9,4 +9,5 @@ router.register('', views.HomeViewListGeneric)
 urlpatterns = [
     path('movie-all/', include(router.urls)),
 
+
 ]

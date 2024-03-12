@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from movie.models import Categories
+from movie.models import Categories, Movie
 
 
 class HomeListSerializer(serializers.Serializer):
@@ -20,5 +20,13 @@ class YearSerializer(serializers.Serializer):
     data = serializers.DateTimeField(source='premiere')
 
 
+class NameDirectorSerializer(serializers.Serializer):
+    name = serializers.CharField()
 
 
+class MovieSerializerDetail(serializers.ModelSerializer):
+    direc = NameDirectorSerializer()
+
+    class Meta:
+        model = Movie
+        fields = '__all__'

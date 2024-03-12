@@ -22,6 +22,7 @@ class GenreAdmin(admin.ModelAdmin):
 
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
+    list_display = ['id', 'title']
     prepopulated_fields = {'slug':('title',)}
 
 

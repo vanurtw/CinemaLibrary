@@ -9,6 +9,7 @@ urlpatterns = [
     path('movie-all/', views.ListViewAPI.as_view()),
     path('categories-all/', views.CategoryAPI.as_view()),
     path('year-all/', views.YearAPI.as_view()),
+    path('movie-detail/<int:pk>/', views.MovieDetail.as_view()),
 
 
 

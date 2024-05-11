@@ -199,7 +199,7 @@
                             <p class="mt-2 editContent" style="outline: none; cursor: inherit;">
                                 {{item.text}}
                             </p>
-                            <a href="{% url 'review_handle' movie.id %}?parent={{item.id}}"> Reply</a>
+                            <a href="{% url 'review_handle' movie.id %}?parent={{item.id}}&comment={{item.id}}"> Reply</a>
                             {% for i in item.parents.all %}
                             <div class="media mt-5 editContent"
                                  style="outline: none; cursor: inherit;">
@@ -212,7 +212,7 @@
                                         style="outline: none; cursor: inherit;">{{i.name}}</h5>
                                     <p class="mt-2 editContent"
                                        style="outline: none; cursor: inherit;">{{i.text}}</p>
-                                    <a href="{% url 'review_handle' movie.id %}?parent={{item.id}}"> Reply</a>
+                                    <a href="{% url 'review_handle' movie.id %}?parent={{item.id}}&comment={{i.id}}"> Reply</a>
                                 </div>
                             </div>
                             {% endfor %}

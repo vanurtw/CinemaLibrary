@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from movie.models import Categories, Movie, Genre
+from movie.models import Categories, Movie, Genre, Reviews
 
 
 class MovieSerializer(serializers.ModelSerializer):
@@ -21,5 +21,28 @@ class GenreSerializers(serializers.ModelSerializer):
         fields = ['title', 'slug', 'description']
 
 
+class RatingSerializers(serializers.Serializer):
+    rating = serializers.CharField()
 
 
+class ReviewsParentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Reviews
+        fields = ['name', 'email', 'text']
+
+
+class ReviewsSerializers(serializers.ModelSerializer):
+    parent = serializers.SerializerMethodField('get_parent')
+    rating = serializers.SerializerMethodField()
+
+    def get_rating(self, instance):
+        return instance.rating.rating
+
+    def get_parent(self, instance):
+        reviews_parent = instance.parents.all()
+        return ReviewsParentSerializer(reviews_parent, many=True).data
+
+    class Meta:
+        model = Reviews
+        fields = ['name', 'email', 'text', 'rating', 'parent']

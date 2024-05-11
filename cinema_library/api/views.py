@@ -1,14 +1,10 @@
-from django.shortcuts import render, get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.views import APIView
 from .serializers import MovieSerializer
 from movie.models import Movie, Categories
-from rest_framework.response import Response
-from rest_framework import generics
-from rest_framework import mixins
 from rest_framework import viewsets
 from .filters import MovieFilter
-from rest_framework.pagination import PageNumberPagination
+from rest_framework.generics import GenericAPIView
+from rest_framework.mixins import ListModelMixin
 
 
 class MovieViewsets(viewsets.ReadOnlyModelViewSet):
@@ -16,3 +12,15 @@ class MovieViewsets(viewsets.ReadOnlyModelViewSet):
     queryset = Movie.objects.all()
     filterset_class = MovieFilter
     filter_backends = [DjangoFilterBackend]
+
+
+class CategoreAPIView(GenericAPIView, ListModelMixin):
+    serializer_class = MovieSerializer
+    pagination_class = None
+
+    def get(self, request):
+        return self.list(request)
+
+    def get_queryset(self):
+        queryset = Movie.objects_active.order_by('-date_create')[:4]
+        return queryset

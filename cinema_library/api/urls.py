@@ -7,10 +7,6 @@ router.register('movie', views.MovieViewsets)
 
 urlpatterns = [
     path('', include(router.urls)),
-    # path('categories-all/', views.CategoryAPI.as_view()),
-    # path('year-all/', views.YearAPI.as_view()),
-    # path('movie-detail/<int:pk>/', views.MovieDetail.as_view()),
-    #
-    #
+    path('category-all/', views.CategoreAPIView.as_view()),
 
 ]

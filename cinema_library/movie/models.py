@@ -5,10 +5,16 @@ from changed.signals import my_signal_test
 from django.db.models.signals import post_save
 from changed.mixins import ChangLoggableMixin
 
+
 # Create your models here.
 class NotParentManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(~Q(parent=None))
+
+
+class ActiveMovie(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(active=True)
 
 
 # Категории
@@ -93,6 +99,7 @@ class Movie(ChangLoggableMixin, models.Model):
     date_create = models.DateTimeField(auto_now_add=True)
     objects = models.Manager()
     not_parents = NotParentManager()
+    objects_active = ActiveMovie()
 
     class Meta:
         verbose_name = 'Фильм'
@@ -150,7 +157,7 @@ class Reviews(models.Model):
                 count += 1
             rating += int(self.rating.rating)
             count += 1
-            self.movie.rating = round(rating/count)
+            self.movie.rating = round(rating / count)
             self.movie.save()
         super().save(*args, **kwargs)
 

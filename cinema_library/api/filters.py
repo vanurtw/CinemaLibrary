@@ -4,8 +4,8 @@ from movie.models import Movie, Genre
 
 class MovieFilter(django_filters.FilterSet):
     genre = django_filters.CharFilter(field_name='genre', lookup_expr='slug__icontains')
-
+    title = django_filters.CharFilter(field_name='title', lookup_expr='icontains')
 
     class Meta:
         model = Movie
-        fields = ['rating', 'genre']
+        fields = ['rating', 'genre', 'title']

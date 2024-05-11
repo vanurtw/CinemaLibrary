@@ -8,3 +8,10 @@ class MovieSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'tagline', 'rating', 'poster', 'genre', 'slug']
         depth = 2
 
+
+class CategorySerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Categories
+        fields = ['name', 'description', 'slug']
+
+

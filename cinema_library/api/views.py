@@ -1,10 +1,12 @@
 from django_filters.rest_framework import DjangoFilterBackend
-from .serializers import MovieSerializer, CategorySerializers
-from movie.models import Movie, Categories
+from .serializers import MovieSerializer, CategorySerializers, GenreSerializers
+from movie.models import Movie, Categories, Genre
 from rest_framework import viewsets
 from .filters import MovieFilter
 from rest_framework.generics import GenericAPIView
 from rest_framework.mixins import ListModelMixin
+from .serializers_mixins import YearSerializerMixin
+from rest_framework.response import Response
 
 
 class MovieViewsets(viewsets.ReadOnlyModelViewSet):
@@ -33,3 +35,21 @@ class CategoryAPIView(GenericAPIView, ListModelMixin):
 
     def get(self, request):
         return self.list(request)
+
+
+class GenreAPIView(GenericAPIView, ListModelMixin):
+    serializer_class = GenreSerializers
+    pagination_class = None
+    queryset = Genre.objects.all()
+
+    def get(self, request):
+        return self.list(request)
+
+
+class YearsAPIView(GenreAPIView, YearSerializerMixin):
+    pagination_class = None
+    queryset = Movie.objects.all().distinct('premiere')
+
+    def get(self, request):
+        serizlizer_data = self.get_data_serializer_mixin('premiere')
+        return Response({'years': serizlizer_data})

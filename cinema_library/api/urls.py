@@ -9,5 +9,7 @@ urlpatterns = [
     path('', include(router.urls)),
     path('last-movie/', views.LastMovieAPIView.as_view()),
     path('category/', views.CategoryAPIView.as_view()),
+    path('genre/', views.GenreAPIView.as_view()),
+    path('years/', views.YearsAPIView.as_view()),
 
 ]

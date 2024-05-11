@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from movie.models import Categories, Movie
+from movie.models import Categories, Movie, Genre
 
 
 class MovieSerializer(serializers.ModelSerializer):
@@ -13,5 +13,13 @@ class CategorySerializers(serializers.ModelSerializer):
     class Meta:
         model = Categories
         fields = ['name', 'description', 'slug']
+
+
+class GenreSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Genre
+        fields = ['title', 'slug', 'description']
+
+
 
 

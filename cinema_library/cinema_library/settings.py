@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'django_filters',
+    'user_visit',
 
 ]
 
@@ -54,6 +55,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'changed.middlewary.LoggedChangedMiddlewary',
+    'user_visit.middleware.UserVisitMiddleware',
+
 ]
 
 ROOT_URLCONF = 'cinema_library.urls'

@@ -6,5 +6,5 @@ from .models import UserVisit
 
 @admin.register(UserVisit)
 class UserVisitAdmin(admin.ModelAdmin):
-    list_display = ['id', 'hash']
-    pass
+    list_display = ['id', 'user', 'http_method', 'resource']
+    list_filter = ['user__username', 'http_method']

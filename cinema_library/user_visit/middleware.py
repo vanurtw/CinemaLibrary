@@ -1,12 +1,14 @@
 import django.db.transaction
 from django.utils import timezone
 from .models import UserVisit
+from django.http import HttpRequest
+import typing
 from django.core.cache import cache
 from django.utils.deprecation import MiddlewareMixin
 
 
 @django.db.transaction.atomic
-def save_user_visit(user_visit):
+def save_user_visit(user_visit: UserVisit) -> None:
     try:
         user_visit.save()
     except:
@@ -24,10 +26,10 @@ class Singleton(object):
 
 
 class UserVisitMiddleware:
-    def __init__(self, get_response):
+    def __init__(self, get_response: typing.Callable) -> None:
         self.get_response = get_response
 
-    def __call__(self, request):
+    def __call__(self, request: HttpRequest):
         if request.user.is_anonymous:
             return self.get_response(request)
         if 'admin' in request.META.get('HTTP_REFERER', ''):

@@ -56,12 +56,12 @@ class UserVisit(models.Model):
     browser = models.CharField(max_length=255, blank=True, default='')
     device = models.CharField(max_length=255, blank=True, default='')
     os = models.CharField(max_length=200, blank=True, default='')
-    hash = models.CharField(max_length=255, help_text='"MD5 hash generated from request properties')
+    hash = models.CharField(max_length=255, help_text='"MD5 hash generated from request properties', unique=True)
     context = models.JSONField(default=dict, blank=True, null=True)
     objects = UserVisitManager()
 
     def save(self, *args, **kwargs):
-        self.hash = self.md5().hexdigest()
+        # self.hash = self.md5().hexdigest()
         super().save(*args, **kwargs)
 
     def __str__(self) -> str:
@@ -77,7 +77,7 @@ class UserVisit(models.Model):
 
     def md5(self):
         h = hashlib.md5(str(self.user.id).encode())
-        h.update(self.date.isoformat().encode())
+        h.update(self.timestamp.isoformat().encode())
         h.update(self.content_type.encode())
         h.update(self.session_key.encode())
         h.update(self.remote_addr.encode())

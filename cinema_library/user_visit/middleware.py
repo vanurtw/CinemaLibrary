@@ -11,6 +11,15 @@ def save_user_visit(user_visit):
         pass
 
 
+class Singleton(object):
+    instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if not cls.instance:
+            cls.instance = super(Singleton, cls).__new__(cls)
+        return cls.instance
+
+
 class UserVisitMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response

@@ -6,4 +6,5 @@ from .models import UserVisit
 
 @admin.register(UserVisit)
 class UserVisitAdmin(admin.ModelAdmin):
+    list_display = ['id', 'hash']
     pass

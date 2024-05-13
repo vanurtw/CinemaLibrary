@@ -23,6 +23,12 @@ def parse_content_type(request):
     return request.META.get('CONTENT_TYPE')
 
 
+def parse_context(request):
+    if request.method == 'POST':
+        context = {i: request.POST.get(i) for i in request.POST}
+        return context
+
+
 class UserVisitManager(models.Manager):
     def build(self, request, timestamp):
         uv = UserVisit(
@@ -33,8 +39,8 @@ class UserVisitManager(models.Manager):
             session_key=request.session.session_key,
             remote_addr=parse_remote_addr(request),
             ua_string=parse_ua_string(request),
-            content_type=parse_content_type(request)
-            # context='a'
+            content_type=parse_content_type(request),
+            context=parse_context(request)
         )
         uv.hash = uv.md5().hexdigest()
         uv.browser = uv.user_agent.get_browser()[:200]

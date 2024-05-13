@@ -182,8 +182,8 @@
                     {% if not item.parent %}
                     <!--                    py-5-->
                     <div class="media py-2" style="padding-bottom: 0px;margin-top: 20px;">
-                        <img src="bundles/images/te2.jpg" class="mr-3 img-fluid" alt="image"
-                             style="outline: none; cursor: inherit;">
+<!--                        <img src="bundles/images/te2.jpg" class="mr-3 img-fluid" alt="image"-->
+<!--                             style="outline: none; cursor: inherit;">-->
                         <div class="media-body mt-4">
                             <h5 class="mt-0 editContent"
                                 style="outline: none; cursor: inherit;">{{item.name}} <span style="color:#f13732">
@@ -199,20 +199,22 @@
                             <p class="mt-2 editContent" style="outline: none; cursor: inherit;">
                                 {{item.text}}
                             </p>
-                            <a href="{% url 'review_handle' movie.id %}?parent={{item.id}}&comment={{item.id}}"> Reply</a>
+                            <a href="{% url 'review_handle' movie.id %}?parent={{item.id}}&comment={{item.id}}">
+                                Reply</a>
                             {% for i in item.parents.all %}
                             <div class="media mt-5 editContent"
                                  style="outline: none; cursor: inherit;">
                                 <a class="pr-3" href="#">
-                                    <img src="bundles/images/te1.jpg" class="img-fluid "
-                                         alt="image" style="outline: none; cursor: inherit;">
+<!--                                    <img src="bundles/images/te1.jpg" class="img-fluid "-->
+<!--                                         alt="image" style="outline: none; cursor: inherit;">-->
                                 </a>
                                 <div class="media-body">
                                     <h5 class="mt-0 editContent"
                                         style="outline: none; cursor: inherit;">{{i.name}}</h5>
                                     <p class="mt-2 editContent"
                                        style="outline: none; cursor: inherit;">{{i.text}}</p>
-                                    <a href="{% url 'review_handle' movie.id %}?parent={{item.id}}&comment={{i.id}}"> Reply</a>
+                                    <a href="{% url 'review_handle' movie.id %}?parent={{item.id}}&comment={{i.id}}">
+                                        Reply</a>
                                 </div>
                             </div>
                             {% endfor %}

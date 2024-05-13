@@ -1,11 +1,12 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from .serializers import MovieSerializer, CategorySerializers, GenreSerializers, ReviewsSerializers
-from movie.models import Movie, Categories, Genre, Reviews
+from movie.models import Movie, Categories, Genre, Reviews, RatingStars
 from rest_framework import viewsets
 from .filters import MovieFilter
 from rest_framework.generics import GenericAPIView
 from rest_framework.mixins import ListModelMixin
 from .serializers_mixins import YearSerializerMixin
+from rest_framework.response import Response
 from rest_framework.response import Response
 
 
@@ -61,6 +62,25 @@ class ReviewsAPIView(GenericAPIView, ListModelMixin):
 
     def get(self, request, id):
         return self.list(request)
+
+    def post(self, request, id):
+        data = request.data
+        movie = Movie.objects.get(id=id)
+        review = Reviews()
+        review.name = data.get('name')
+        review.email = data.get('email')
+        review.text = data.get('text')
+        review.movie = movie
+        parent_id = data.get('parent')
+        if parent_id:
+            parent = Reviews.objects.get(id=parent_id)
+            review.parent = parent
+        else:
+            rating = RatingStars.objects.get(id=data.get('rating'))
+            review.rating = rating
+        review.save()
+
+        return Response({'a': 'a'})
 
     def get_queryset(self):
         id = self.kwargs.get('id')

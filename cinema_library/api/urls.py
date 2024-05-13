@@ -11,6 +11,6 @@ urlpatterns = [
     path('category/', views.CategoryAPIView.as_view()),
     path('genre/', views.GenreAPIView.as_view()),
     path('years/', views.YearsAPIView.as_view()),
-    path('reviews/<int:id>/', views.ReviewsAPIView.as_view()),
+    path('reviews/<int:id>/', views.ReviewsAPIView.as_view(), name='api_review_handle'),
 
 ]
